@@ -78,7 +78,8 @@ def doctor():
 
     try:
         from plugins.llm_assistant.client import plugin_status
-        console.print(f"LLM assistant plugin: {plugin_status()}")
+        from rich.markup import escape
+        console.print(f"LLM assistant plugin: {escape(plugin_status())}")
     except Exception:
         console.print("LLM assistant plugin: not installed (optional; `pip install -e '.\\[llm]'`)")
 
