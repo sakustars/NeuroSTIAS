@@ -1,0 +1,56 @@
+{
+  "kind": "experiment",
+  "name": "E11",
+  "data_origin": "real",
+  "params": {
+    "density": 0.15,
+    "cv": "StratifiedKFold(5) x 10",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "development_fmri_msdl_timeseries": {
+      "path": "data/ephys_imaging/development_fmri_msdl_timeseries.npz",
+      "bytes": 8140740,
+      "sha256": "e8005df60496ed5fe4d426302ff0d018ae98a459b8e9d894b98e472ef561a133"
+    }
+  },
+  "started_at": "2026-10-04T22:08:59",
+  "git": {
+    "commit": "4736d79e22bd3df918f2b055ced231cf38b2a99a",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T22:09:27",
+  "summary_file": "summary.json"
+}

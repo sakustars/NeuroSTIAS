@@ -1,0 +1,19 @@
+name: legacy.region_de
+category: legacy
+description: 3D-STIAS V4.4.1 differential expression between k-means spatial regions with observation-level
+  t-tests (kept for comparison; prefer stats.replicate_de).
+entry: neurostias.skills_impl:region_de_v441_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: n_regions
+  type: int
+  default: 8
+- name: min_cells
+  type: int
+  default: 10
+outputs:
+- de_summary.csv
+- tables/

@@ -1,0 +1,11 @@
+panel,n_panel,n_in_data,n_detected,detected,usable
+Dorsal telencephalon,6,6,6,FOXG1;EMX1;EMX2;NEUROD6;TBR1;LHX2,True
+Ventral telencephalon,6,6,6,DLX2;DLX5;GSX2;NKX2-1;LHX6;DLX6-AS1,True
+Thalamus / diencephalon,4,4,4,TCF7L2;LHX9;GBX2;SHOX2,True
+Hypothalamus,5,5,5,RAX;OTP;SIX3;SIM1;NKX2-1,True
+Midbrain,5,5,5,EN1;EN2;PAX7;LMX1A;OTX2,True
+Hindbrain,5,5,5,HOXA2;HOXB2;HOXB3;PHOX2B;GBX2,True
+Cerebellum,4,4,4,ATOH1;BARHL1;SKOR2;PTF1A,True
+Retina,3,3,3,VSX2;RAX;SIX6,True
+Choroid plexus,3,3,3,TTR;HTR2C;CLIC6,True
+Neural crest / mesenchyme,4,4,4,SOX10;FOXD3;COL1A1;COL3A1,True

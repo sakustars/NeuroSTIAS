@@ -1,0 +1,244 @@
+{
+  "id": "E01",
+  "title": "Spatial domain detection on human DLPFC (12 Visium sections, 3 donors)",
+  "question": "How accurately do NeuroSTIAS domains recover manually annotated cortical layers compared with published spatial-domain methods and the 3D-STIAS V4.4.1 approach?",
+  "data_origin": "real",
+  "baseline_status": {
+    "banksy": {
+      "status": "ran",
+      "detail": ""
+    },
+    "spagcn": {
+      "status": "ran",
+      "detail": ""
+    },
+    "graphst": {
+      "status": "ran",
+      "detail": ""
+    }
+  },
+  "notes": [
+    "Scores exclude spots without a manual layer label (NA).",
+    "k (number of domains) is set to the number of annotated layers per section for every method; this is the standard DLPFC benchmark protocol and favours no method.",
+    "No histology images were used by any method (SpaGCN run with histology=False).",
+    "neurostias (default) uses fixed a-priori parameters; neurostias_lodo selects parameters on the other donors only, so its held-out scores are not optimistically biased.",
+    "Published DLPFC ARIs for BANKSY, GraphST and SpaGCN are often higher because they use R mclust clustering and/or histology; here all methods ran on CPU without histology, with Leiden resolution search (BANKSY, GraphST) or k-means initialisation (SpaGCN), so absolute values are not comparable with those papers."
+  ],
+  "lodo_selected_params": {
+    "Br5292": {
+      "lam": 0.95,
+      "hops": 4,
+      "k_neighbors": 6,
+      "cluster_method": "gmm"
+    },
+    "Br5595": {
+      "lam": 0.95,
+      "hops": 4,
+      "k_neighbors": 6,
+      "cluster_method": "gmm"
+    },
+    "Br8100": {
+      "lam": 0.95,
+      "hops": 4,
+      "k_neighbors": 6,
+      "cluster_method": "gmm"
+    }
+  },
+  "summary": [
+    {
+      "method": "graphst",
+      "n_sections": 12,
+      "ari_mean": 0.423430599536049,
+      "ari_ci_low": 0.3744400537903561,
+      "ari_ci_high": 0.46979585658108464,
+      "nmi_mean": 0.5579666164524545,
+      "nmi_ci_low": 0.5212878376513337,
+      "nmi_ci_high": 0.5921508477641906,
+      "median_seconds": 112.54150946140288
+    },
+    {
+      "method": "spagcn",
+      "n_sections": 12,
+      "ari_mean": 0.34359842319353634,
+      "ari_ci_low": 0.3079748461170834,
+      "ari_ci_high": 0.3745366490520085,
+      "nmi_mean": 0.5078289432681196,
+      "nmi_ci_low": 0.47356262287708106,
+      "nmi_ci_high": 0.5379735150429874,
+      "median_seconds": 12.576032066345215
+    },
+    {
+      "method": "neurostias_lodo",
+      "n_sections": 12,
+      "ari_mean": 0.3374636024765967,
+      "ari_ci_low": 0.3067526808359605,
+      "ari_ci_high": 0.3709258108171662,
+      "nmi_mean": 0.5001891761156867,
+      "nmi_ci_low": 0.47869898924956983,
+      "nmi_ci_high": 0.5223090679382203,
+      "median_seconds": 0.38226966857910155
+    },
+    {
+      "method": "neurostias",
+      "n_sections": 12,
+      "ari_mean": 0.31334926810538594,
+      "ari_ci_low": 0.2934974850263186,
+      "ari_ci_high": 0.3361609836898648,
+      "nmi_mean": 0.4765924471251723,
+      "nmi_ci_low": 0.46523253019416405,
+      "nmi_ci_high": 0.4884540511723508,
+      "median_seconds": 0.7505734205245972
+    },
+    {
+      "method": "neurostias_norefine",
+      "n_sections": 12,
+      "ari_mean": 0.3101541975958639,
+      "ari_ci_low": 0.2911396791997988,
+      "ari_ci_high": 0.33153122389525397,
+      "nmi_mean": 0.47086331008217214,
+      "nmi_ci_low": 0.4599064343870719,
+      "nmi_ci_high": 0.48235878695515255,
+      "median_seconds": 0.38138866424560547
+    },
+    {
+      "method": "banksy",
+      "n_sections": 12,
+      "ari_mean": 0.2955085771385218,
+      "ari_ci_low": 0.26907226057875144,
+      "ari_ci_high": 0.32521169081006107,
+      "nmi_mean": 0.4165141050798084,
+      "nmi_ci_low": 0.3939492983429555,
+      "nmi_ci_high": 0.4418430044131872,
+      "median_seconds": 22.65211086273193
+    },
+    {
+      "method": "v441_combined",
+      "n_sections": 12,
+      "ari_mean": 0.23158225478603442,
+      "ari_ci_low": 0.2035358241584299,
+      "ari_ci_high": 0.2621784005019794,
+      "nmi_mean": 0.3477388785982953,
+      "nmi_ci_low": 0.3305055433263516,
+      "nmi_ci_high": 0.3659877382380226,
+      "median_seconds": 0.14381842613220214
+    },
+    {
+      "method": "v441_spatial",
+      "n_sections": 12,
+      "ari_mean": 0.21192168731771274,
+      "ari_ci_low": 0.1866830898370782,
+      "ari_ci_high": 0.23013471048403228,
+      "nmi_mean": 0.3586374738677332,
+      "nmi_ci_low": 0.33792109273428694,
+      "nmi_ci_high": 0.3722431383547296,
+      "median_seconds": 0.13926134109497068
+    },
+    {
+      "method": "scanpy_leiden",
+      "n_sections": 12,
+      "ari_mean": 0.20479593162244644,
+      "ari_ci_low": 0.18401898637371414,
+      "ari_ci_high": 0.22609232134981905,
+      "nmi_mean": 0.26616737093355064,
+      "nmi_ci_low": 0.2358097600292873,
+      "nmi_ci_high": 0.29430376670410097,
+      "median_seconds": 0.35060622692108157
+    },
+    {
+      "method": "kmeans_pca",
+      "n_sections": 12,
+      "ari_mean": 0.19966146431048126,
+      "ari_ci_low": 0.18310284198925803,
+      "ari_ci_high": 0.21701607772184484,
+      "nmi_mean": 0.3098765951759234,
+      "nmi_ci_low": 0.2891477779599203,
+      "nmi_ci_high": 0.3321785260229794,
+      "median_seconds": 0.21016511917114258
+    },
+    {
+      "method": "neurostias_nosp",
+      "n_sections": 12,
+      "ari_mean": 0.19606545214242424,
+      "ari_ci_low": 0.1800390587281191,
+      "ari_ci_high": 0.21256393398919535,
+      "nmi_mean": 0.30642102752707095,
+      "nmi_ci_low": 0.2868379562603682,
+      "nmi_ci_high": 0.32675895710745617,
+      "median_seconds": 0.5146342992782593
+    }
+  ],
+  "paired_tests": [
+    {
+      "comparison": "neurostias - banksy",
+      "mean_ari_difference": 0.01784069096686419,
+      "n_sections": 12,
+      "sections_neurostias_better": 7,
+      "wilcoxon_p": 0.4697265625
+    },
+    {
+      "comparison": "neurostias - graphst",
+      "mean_ari_difference": -0.11008133143066305,
+      "n_sections": 12,
+      "sections_neurostias_better": 1,
+      "wilcoxon_p": 0.00341796875
+    },
+    {
+      "comparison": "neurostias - kmeans_pca",
+      "mean_ari_difference": 0.11368780379490467,
+      "n_sections": 12,
+      "sections_neurostias_better": 12,
+      "wilcoxon_p": 0.00048828125
+    },
+    {
+      "comparison": "neurostias - neurostias_lodo",
+      "mean_ari_difference": -0.024114334371210747,
+      "n_sections": 12,
+      "sections_neurostias_better": 2,
+      "wilcoxon_p": 0.02099609375
+    },
+    {
+      "comparison": "neurostias - neurostias_norefine",
+      "mean_ari_difference": 0.0031950705095220903,
+      "n_sections": 12,
+      "sections_neurostias_better": 12,
+      "wilcoxon_p": 0.00048828125
+    },
+    {
+      "comparison": "neurostias - neurostias_nosp",
+      "mean_ari_difference": 0.11728381596296172,
+      "n_sections": 12,
+      "sections_neurostias_better": 12,
+      "wilcoxon_p": 0.00048828125
+    },
+    {
+      "comparison": "neurostias - scanpy_leiden",
+      "mean_ari_difference": 0.10855333648293952,
+      "n_sections": 12,
+      "sections_neurostias_better": 12,
+      "wilcoxon_p": 0.00048828125
+    },
+    {
+      "comparison": "neurostias - spagcn",
+      "mean_ari_difference": -0.030249155088150365,
+      "n_sections": 12,
+      "sections_neurostias_better": 2,
+      "wilcoxon_p": 0.05224609375
+    },
+    {
+      "comparison": "neurostias - v441_combined",
+      "mean_ari_difference": 0.08176701331935157,
+      "n_sections": 12,
+      "sections_neurostias_better": 12,
+      "wilcoxon_p": 0.00048828125
+    },
+    {
+      "comparison": "neurostias - v441_spatial",
+      "mean_ari_difference": 0.10142758078767324,
+      "n_sections": 12,
+      "sections_neurostias_better": 12,
+      "wilcoxon_p": 0.00048828125
+    }
+  ],
+  "quick_mode": false,
+  "runtime_seconds": 9162.0
+}

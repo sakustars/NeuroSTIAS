@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use NeuroSTIAS, please cite it as below."
+title: "NeuroSTIAS: a plug-and-play neuroscience analysis system centred on 3D spatial transcriptomics"
+authors:
+  - name: "The NeuroSTIAS authors"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/sakustars/NeuroSTIAS"

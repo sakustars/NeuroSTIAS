@@ -1,0 +1,38 @@
+name: spatial3d.reconstruct
+category: spatial3d
+description: Register serial sections within each biological sample (rigid multi-start trimmed ICP, no
+  reflection) and build 3D coordinates with an explicit, recorded z source.
+entry: neurostias.skills_impl:reconstruct_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: section_key
+  type: str
+  required: true
+- name: block_key
+  type: str
+  description: obs column with independent samples (animal/donor); edges never cross samples
+- name: coord_key
+  type: str
+  default: spatial
+- name: z_key
+  type: str
+  description: obs column with per-observation z in micrometres
+- name: z_spacing
+  type: float
+  description: Section spacing in micrometres
+- name: order_key
+  type: str
+  description: obs column with section order/number
+- name: register
+  type: bool
+  default: true
+- name: save_h5ad
+  type: bool
+  default: true
+  description: Write the updated AnnData to the run folder
+outputs:
+- registration_audit.csv
+- output.h5ad

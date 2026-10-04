@@ -1,0 +1,44 @@
+name: spatial3d.communication
+category: spatial3d
+description: 'Neuro-specific cell-cell communication between spatial neighbours in 2D/3D: neurotransmitters
+  (synthesis enzyme + vesicular transporter), neuropeptides, neurotrophins, neuron-glia and neurovascular
+  signals, with within-sample permutation and replicate-consistency filtering.'
+entry: neurostias.skills_impl:communication_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: label_key
+  type: str
+  default: neuro_class
+- name: database
+  type: str
+  default: neuro
+  choices:
+  - neuro
+  - generic_v441
+- name: k
+  type: int
+  default: 8
+- name: z_scale
+  type: float
+  default: 1.0
+  description: Multiplier on z before neighbour search (0 = per-section 2D)
+- name: n_permutations
+  type: int
+  default: 200
+- name: section_key
+  type: str
+  description: obs column with section/slice IDs (for per-section plots and 2D graphs)
+- name: block_key
+  type: str
+  description: obs column with independent samples (animal/donor); edges never cross samples
+- name: min_replicate_fraction
+  type: float
+  default: 0.5
+outputs:
+- communication.csv
+- communication_counts.png
+references:
+- Zhao et al. 2023 Nat Commun (NeuronChat)

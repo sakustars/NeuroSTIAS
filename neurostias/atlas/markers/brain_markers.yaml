@@ -1,0 +1,105 @@
+# Curated brain marker panels (version 1, 2026-10).
+#
+# Selection rule: only canonical markers that are standard in the neuroscience
+# literature. No panel was derived from any benchmark dataset used in
+# experiments/ (DLPFC, MERFISH hypothalamus, GSE214349), so annotation results on
+# those datasets are not circular.
+#
+# Primary sources: Hodge et al. 2019 Nature (human MTG taxonomy); Tasic et al. 2018
+# Nature (mouse cortex); Zeisel et al. 2018 Cell (mouse nervous system);
+# Molyneaux et al. 2007 Nat Rev Neurosci (layer identity); Lake et al. 2018 Nat
+# Biotechnol; Keren-Shaul et al. 2017 Cell (disease-associated microglia);
+# Zamanian et al. 2012 J Neurosci (reactive astrocytes); Zhao et al. 2023 Nat
+# Commun (NeuronChat, neurotransmitter gene definitions).
+#
+# Species: `human` symbols are HGNC. Mouse symbols default to the human symbol in
+# title case (SLC17A7 -> Slc17a7) unless `mouse:` is given explicitly.
+
+version: 1
+
+classes:          # level 1: mutually exclusive major classes
+  Excitatory neuron: {human: [SLC17A7, SATB2, NEUROD2, NEUROD6, CAMK2A, NRGN, SLC17A6]}
+  Inhibitory neuron: {human: [GAD1, GAD2, SLC32A1, DLX1, DLX6-AS1, ERBB4], mouse: [Gad1, Gad2, Slc32a1, Dlx1, Dlx6os1, Erbb4]}
+  Astrocyte: {human: [GFAP, AQP4, ALDH1L1, SLC1A2, SLC1A3, GJA1, FGFR3, SLC4A4]}
+  Oligodendrocyte: {human: [MBP, PLP1, MOBP, MOG, MAG, CLDN11, ST18, OPALIN]}
+  OPC: {human: [PDGFRA, CSPG4, VCAN, PCDH15, GPR17, OLIG1]}
+  Microglia: {human: [P2RY12, CX3CR1, TMEM119, CSF1R, C1QA, C1QB, AIF1, HEXB]}
+  Border macrophage: {human: [MRC1, CD163, LYVE1, F13A1, MS4A7]}
+  Endothelial: {human: [CLDN5, FLT1, PECAM1, VWF, SLC2A1, ABCB1, ESAM], mouse: [Cldn5, Flt1, Pecam1, Vwf, Slc2a1, Abcb1a, Esam]}
+  Pericyte: {human: [PDGFRB, RGS5, KCNJ8, ABCC9, VTN]}
+  Vascular smooth muscle: {human: [ACTA2, MYH11, TAGLN, CNN1]}
+  Fibroblast / VLMC: {human: [DCN, COL1A2, LUM, SLC6A13, COL1A1]}
+  Ependymal: {human: [FOXJ1, PIFO, DYNLRB2, CCDC153, RARRES2]}
+  Choroid plexus: {human: [TTR, KL, CLIC6, FOLR1, KCNJ13]}
+  Erythrocyte (blood): {human: [HBB, HBA1, HBA2, ALAS2], mouse: [Hbb-bs, Hba-a1, Hba-a2, Alas2]}
+  T / NK cell: {human: [CD3E, CD3D, CD2, NKG7, GZMA], mouse: [Cd3e, Cd3d, Cd2, Nkg7, Gzma]}
+
+pan_neuronal: {human: [RBFOX3, SNAP25, SYT1, STMN2, NEFL, SYP]}
+
+neuron_subclasses:   # level 2, scored only within neurons
+  L2/3 IT: {parent: Excitatory neuron, human: [CUX2, RASGRF2, LAMP5, CALB1]}
+  L4 IT: {parent: Excitatory neuron, human: [RORB, RSPO1, WHRN]}
+  L5 ET: {parent: Excitatory neuron, human: [FEZF2, BCL11B, POU3F1]}
+  L5/6 NP: {parent: Excitatory neuron, human: [TSHZ2, NXPH1, SLC17A8]}
+  L6 IT/CT: {parent: Excitatory neuron, human: [TLE4, FOXP2, SYT6, SEMA3E]}
+  L6b: {parent: Excitatory neuron, human: [CCN2, NXPH4, CPLX3], mouse: [Ccn2, Nxph4, Cplx3]}
+  PVALB interneuron: {parent: Inhibitory neuron, human: [PVALB, LHX6, TAC1]}
+  SST interneuron: {parent: Inhibitory neuron, human: [SST, LHX6, NPY]}
+  VIP interneuron: {parent: Inhibitory neuron, human: [VIP, ADARB2, CALB2]}
+  LAMP5 interneuron: {parent: Inhibitory neuron, human: [LAMP5, ADARB2, NDNF]}
+  SNCG interneuron: {parent: Inhibitory neuron, human: [SNCG, ADARB2, CNR1]}
+
+neurotransmitter:    # transmitter identity = synthesis enzyme + vesicular transporter (NeuronChat-style)
+  Glutamatergic: {human: [SLC17A7, SLC17A6, SLC17A8]}
+  GABAergic: {human: [GAD1, GAD2, SLC32A1]}
+  Glycinergic: {human: [SLC6A5, SLC32A1]}
+  Cholinergic: {human: [CHAT, SLC18A3, SLC5A7]}
+  Dopaminergic: {human: [TH, DDC, SLC6A3, SLC18A2]}
+  Noradrenergic: {human: [TH, DBH, SLC6A2, SLC18A2]}
+  Serotonergic: {human: [TPH2, DDC, SLC6A4, FEV]}
+  Histaminergic: {human: [HDC, SLC18A2]}
+
+cortical_layers:     # canonical layer identity genes (not derived from DLPFC)
+  L1: {human: [RELN, NDNF, LAMP5]}
+  L2/3: {human: [CUX2, CALB1, RASGRF2]}
+  L4: {human: [RORB, RSPO1, WHRN]}
+  L5: {human: [BCL11B, FEZF2, PCP4, ETV1]}
+  L6: {human: [TLE4, FOXP2, SYT6, NR4A2]}
+  White matter: {human: [MBP, PLP1, MOBP, MOG]}
+
+mouse_brain_regions:
+  Isocortex: {mouse: [Satb2, Slc17a7, Neurod6, Stx1a]}
+  Hippocampus CA: {mouse: [Wfs1, Fibcd1, Neurod6, Nr3c2]}
+  Dentate gyrus: {mouse: [Prox1, C1ql2, Dsp]}
+  Striatum: {mouse: [Ppp1r1b, Penk, Drd1, Drd2, Adora2a, Rgs9]}
+  Thalamus: {mouse: [Tcf7l2, Prkcd, Slc17a6, Zic1]}
+  Hypothalamus: {mouse: [Agrp, Pomc, Hcrt, Pmch, Avp, Oxt, Gal, Nr5a1]}
+  Fiber tracts: {mouse: [Mbp, Plp1, Mobp, Mog]}
+  Choroid plexus / ventricle: {mouse: [Ttr, Kl, Foxj1, Ccdc153]}
+
+states:              # injury/disease states (scored, not used as exclusive labels)
+  Reactive astrocyte: {human: [SERPINA3, LCN2, C3, CD44, VIM, GFAP], mouse: [Serpina3n, Lcn2, C3, Cd44, Vim, Gfap]}
+  Disease-associated microglia: {human: [APOE, TREM2, SPP1, CD9, LPL, CST7, ITGAX]}
+  Interferon response: {human: [IFIT1, IFIT3, ISG15, IRF7, STAT1, MX1], mouse: [Ifit1, Ifit3, Isg15, Irf7, Stat1, Mx1]}
+  Immediate early genes: {human: [FOS, JUNB, EGR1, ARC, NPAS4, NR4A1]}
+  Hemorrhage / iron handling: {human: [HBB, HBA1, HMOX1, FTL, FTH1, CD163], mouse: [Hbb-bs, Hba-a1, Hmox1, Ftl1, Fth1, Cd163]}
+
+neurodevelopment:    # neural lineage stages (used for organoids and development)
+  Radial glia / NPC: {human: [SOX2, PAX6, VIM, NES, HES1, FABP7, HOPX]}
+  Intermediate progenitor: {human: [EOMES, NEUROG2, NEUROD4, PPP1R17]}
+  Cycling progenitor: {human: [MKI67, TOP2A, CENPF, UBE2C]}
+  Immature neuron: {human: [DCX, NEUROD2, NEUROD6, STMN2, TBR1, SOX11]}
+  Mature neuron: {human: [RBFOX3, SNAP25, SYT1, GRIN2B, CAMK2A, NRGN]}
+  Glial progenitor: {human: [OLIG2, PDGFRA, EGFR, ASCL1]}
+
+developing_regions:  # regional identity in developing human brain / organoids (added before any organoid data was inspected)
+  Dorsal telencephalon: {human: [FOXG1, EMX1, EMX2, NEUROD6, TBR1, LHX2]}
+  Ventral telencephalon: {human: [DLX2, DLX5, GSX2, NKX2-1, LHX6, DLX6-AS1]}
+  Thalamus / diencephalon: {human: [TCF7L2, LHX9, GBX2, SHOX2]}
+  Hypothalamus: {human: [RAX, OTP, SIX3, SIM1, NKX2-1]}
+  Midbrain: {human: [EN1, EN2, PAX7, LMX1A, OTX2]}
+  Hindbrain: {human: [HOXA2, HOXB2, HOXB3, PHOX2B, GBX2]}
+  Cerebellum: {human: [ATOH1, BARHL1, SKOR2, PTF1A]}
+  Retina: {human: [VSX2, RAX, SIX6]}
+  Choroid plexus: {human: [TTR, HTR2C, CLIC6]}
+  Neural crest / mesenchyme: {human: [SOX10, FOXD3, COL1A1, COL3A1]}

@@ -1,0 +1,72 @@
+# Every dataset used by NeuroSTIAS skills and experiments.
+# Files are downloaded to data/<id>/ (git-ignored); SHA-256 recorded in data/checksums.lock.json.
+datasets:
+  gse214349_3d:
+    description: GSE214349 mouse intraventricular-haemorrhage brain, 10x Visium, 19 serial sections from 5 mice, reconstructed to 3D
+    local_path: ~/data/GSE214349/prepared   # build with the GSE214349 importer from GEO raw files
+    main_file: GSE214349_reconstructed_3d.h5ad
+    species: mouse
+    origin: real
+    source: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE214349
+    z_note: >
+      GEO: 10 um coronal sections; library patches start at the lateral ventricle "with 20 um intervals and a
+      10 um margin of error". Section labels (20, 50, 80, 110, 130, 150) are used as z positions in um
+      (spacing 20-30 um, gaps preserved). The earlier reconstruction (order x 20 um) is kept as a sensitivity check.
+
+  dlpfc:
+    description: Human DLPFC 10x Visium, 12 sections from 3 donors with manual cortical-layer labels (spatialLIBD)
+    main_file: dlpfc_all.h5ad
+    script: data/scripts/fetch_dlpfc.py
+    approx_size: 160 MB
+    species: human
+    origin: real
+    citation: Maynard et al. 2021 Nat Neurosci 24:425-436
+    license: CC BY 4.0 (spatialLIBD)
+    source: https://research.libd.org/spatialLIBD/
+
+  merfish_hypothalamus:
+    description: Mouse preoptic hypothalamus MERFISH, 73,655 cells x 161 genes, 12 Bregma sections from one animal, author cell classes
+    main_file: merfish_moffitt2018.h5ad
+    script_note: downloaded with squidpy.datasets.merfish (figshare mirror of Moffitt et al. 2018)
+    approx_size: 70 MB
+    species: mouse
+    origin: real
+    citation: Moffitt et al. 2018 Science 362:eaau5324
+
+  organoid_hnoca:
+    description: Organoid time-course subset of the Human Neural Organoid Cell Atlas (one publication with the most distinct ages; raw counts; harmonised annotations)
+    main_file: hnoca_timecourse_subset.h5ad
+    script: data/scripts/fetch_hnoca_subset.py
+    note: the local copy was assembled by data/scripts/repair_hnoca_first_run.py from a first extraction whose write stopped after X/obs; it verifies the reused counts against the remote atlas (selection, per-row nnz for every cell, exact values on sampled runs)
+    approx_size: 600 MB
+    species: human
+    origin: real
+    citation: He et al. 2024 Nature 635 (HNOCA); CELLxGENE dataset 3a805b8d-c9d8-4c9b-881f-0eefa635974d
+    license: CC BY 4.0
+
+  dandi_000006:
+    description: Mouse ALM extracellular recordings (NWB units) during a delayed-response task, DANDI 000006 v0.220126.1855
+    main_file: manifest.json
+    script: data/scripts/fetch_dandi.py
+    approx_size: 140 MB
+    species: mouse
+    origin: real
+    license: CC BY 4.0
+    source: https://dandiarchive.org/dandiset/000006
+
+  ephys_imaging:
+    description: EEGBCI motor imagery (PhysioNet, subjects 1-20, runs 6/10/14) and nilearn development fMRI (MSDL time series)
+    main_file: development_fmri_msdl_timeseries.npz
+    script: data/scripts/fetch_eeg_fmri.py
+    approx_size: 1.5 GB
+    origin: real
+    citation: Schalk et al. 2004 IEEE TBME; Goldberger et al. 2000 (PhysioNet); Richardson et al. 2018 Nat Commun
+
+  neuromorpho:
+    description: NeuroMorpho.org Allen Cell Types archive (mouse V1), balanced principal cells vs interneurons, CNG SWC
+    main_file: selected_metadata.csv
+    script: data/scripts/fetch_neuromorpho.py
+    approx_size: 60 MB
+    species: mouse
+    origin: real
+    citation: Ascoli et al. 2007 J Neurosci (NeuroMorpho.org); Allen Cell Types Database

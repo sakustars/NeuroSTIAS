@@ -1,0 +1,27 @@
+name: legacy.trajectory
+category: legacy
+description: Diffusion pseudotime with explicit biological root selection (label medoid or root gene)
+  and a sensitivity analysis; flags non-biological directions.
+entry: neurostias.skills_impl:trajectory_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: root_label_key
+  type: str
+- name: root_label
+  type: str
+- name: root_gene
+  type: str
+- name: n_neighbors
+  type: int
+  default: 15
+- name: save_h5ad
+  type: bool
+  default: true
+  description: Write the updated AnnData to the run folder
+outputs:
+- pseudotime.csv
+references:
+- Haghverdi et al. 2016 Nat Methods

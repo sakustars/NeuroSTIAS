@@ -1,0 +1,29 @@
+name: legacy.misc
+category: legacy
+description: 'Other V4.4.1 analyses: tissue overview, NNLS deconvolution, graph-convolution embedding,
+  metabolic programmes (incl. lactate shuttle, glutamate-glutamine cycle), colocalisation candidates,
+  virtual-intervention sandbox, V4.4.1 coordinate communities.'
+entry: neurostias.skills_impl:misc_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: analysis
+  type: str
+  required: true
+  choices:
+  - overview
+  - deconvolution
+  - gcn
+  - metabolic
+  - colocalization
+  - intervention
+  - community_v441
+- name: group_key
+  type: str
+- name: save_h5ad
+  type: bool
+  default: false
+outputs:
+- varies by analysis

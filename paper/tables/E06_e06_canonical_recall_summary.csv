@@ -1,0 +1,7 @@
+dataset,method,n_recovered,n_canonical,n_not_in_db
+DLPFC,liana,0,9,3
+DLPFC,neurostias_generic_v441,1,9,6
+DLPFC,neurostias_neuro,4,9,0
+MERFISH,liana,0,9,3
+MERFISH,neurostias_generic_v441,0,9,6
+MERFISH,neurostias_neuro,0,9,0

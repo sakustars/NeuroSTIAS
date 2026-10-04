@@ -1,0 +1,27 @@
+name: legacy.development
+category: legacy
+description: Neurodevelopmental stage scoring (radial glia/NPC, intermediate progenitor, cycling, immature
+  and mature neuron, glial progenitor) and a neuronal maturation index; optionally the V4.4.1 pluripotency
+  stemness score.
+entry: neurostias.skills_impl:development_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: species
+  type: str
+  default: auto
+- name: include_v441_stemness
+  type: bool
+  default: true
+- name: save_h5ad
+  type: bool
+  default: true
+  description: Write the updated AnnData to the run folder
+- name: section_key
+  type: str
+  description: obs column with section/slice IDs (for per-section plots and 2D graphs)
+outputs:
+- development_scores.csv
+- maturation_index.png

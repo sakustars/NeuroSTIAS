@@ -1,0 +1,25 @@
+name: modeling.hh
+category: modeling
+description: Hodgkin-Huxley neuron f-I curve and voltage trace, with optional sodium/potassium conductance
+  block (e.g. g_na_scale=0 mimics TTX).
+entry: neurostias.skills_impl:hh_skill
+inputs:
+- name: currents
+  type: str
+  default: 0,2,4,6,7,8,10,15,20,30
+  description: "Comma-separated currents (\xB5A/cm\xB2)"
+- name: g_na_scale
+  type: float
+  default: 1.0
+- name: g_k_scale
+  type: float
+  default: 1.0
+- name: T
+  type: float
+  default: 500.0
+  description: Duration (ms)
+outputs:
+- fi_curve.csv
+- hh_fi_curve.png
+references:
+- Hodgkin & Huxley 1952 J Physiol

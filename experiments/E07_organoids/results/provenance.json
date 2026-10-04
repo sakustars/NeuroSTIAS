@@ -1,0 +1,56 @@
+{
+  "kind": "experiment",
+  "name": "E07",
+  "data_origin": "real",
+  "params": {
+    "alpha": 0.05,
+    "n_null": 1000,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "hnoca_timecourse_subset": {
+      "path": "data/organoid_hnoca/hnoca_timecourse_subset.h5ad",
+      "bytes": 1189034700,
+      "sha256": "a9ef2e45db30391a046e978cd11963ef268b6b1638a57c7ab5107c024accc42a"
+    }
+  },
+  "started_at": "2026-10-04T22:20:10",
+  "git": {
+    "commit": "c4cf142a74c73d6e532492f2d054c6e11e162d6f",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T22:20:40",
+  "summary_file": "summary.json"
+}

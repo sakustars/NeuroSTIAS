@@ -1,0 +1,5 @@
+name: llm_assistant
+description: Optional natural-language assistant that answers neuroscience questions by calling NeuroSTIAS skills. Model-agnostic; local by default, cloud opt-in.
+requires_extra: llm
+commands: [ask]
+providers: [local, anthropic, openai]

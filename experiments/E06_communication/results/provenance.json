@@ -1,0 +1,166 @@
+{
+  "kind": "experiment",
+  "name": "E06",
+  "data_origin": "real",
+  "params": {
+    "n_permutations": 200,
+    "k_merfish": 10,
+    "k_dlpfc": 6,
+    "canonical_list": [
+      [
+        "PDGFB_PDGFRB",
+        "PDGFB_PDGFRB",
+        [
+          "Endothelial"
+        ],
+        [
+          "Pericyte"
+        ]
+      ],
+      [
+        "CX3CL1_CX3CR1",
+        null,
+        [
+          "Excitatory neuron",
+          "Inhibitory neuron"
+        ],
+        [
+          "Microglia"
+        ]
+      ],
+      [
+        "IL34_CSF1R",
+        null,
+        [
+          "Excitatory neuron",
+          "Inhibitory neuron"
+        ],
+        [
+          "Microglia"
+        ]
+      ],
+      [
+        "CSF1_CSF1R",
+        "CSF1_CSF1R",
+        [
+          "Astrocyte",
+          "Oligodendrocyte",
+          "OPC",
+          "Excitatory neuron",
+          "Inhibitory neuron"
+        ],
+        [
+          "Microglia"
+        ]
+      ],
+      [
+        "GABA_A",
+        null,
+        [
+          "Inhibitory neuron"
+        ],
+        [
+          "Excitatory neuron",
+          "Inhibitory neuron"
+        ]
+      ],
+      [
+        "GLU_AMPA",
+        null,
+        [
+          "Excitatory neuron"
+        ],
+        [
+          "Excitatory neuron",
+          "Inhibitory neuron"
+        ]
+      ],
+      [
+        "GLU_NMDA_2B",
+        null,
+        [
+          "Excitatory neuron"
+        ],
+        [
+          "Excitatory neuron",
+          "Inhibitory neuron"
+        ]
+      ],
+      [
+        "VEGFA_R",
+        "VEGFA_KDR",
+        [
+          "Astrocyte"
+        ],
+        [
+          "Endothelial"
+        ]
+      ],
+      [
+        "PTN_PTPRZ1",
+        null,
+        [
+          "Excitatory neuron",
+          "Inhibitory neuron",
+          "Astrocyte"
+        ],
+        [
+          "OPC",
+          "Astrocyte"
+        ]
+      ]
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "merfish": {
+      "path": "data/merfish_hypothalamus/merfish_moffitt2018.h5ad",
+      "bytes": 51577387,
+      "sha256": "371723d48413ba76aba49ccf7ea24867b1db940529216fe2902484f5c2a48904"
+    },
+    "dlpfc_all": {
+      "path": "data/dlpfc/dlpfc_all.h5ad",
+      "bytes": 1331528080,
+      "sha256": "0d135ba65586f2e1f7ef5f99d40be163071496a80cbd9a5e1002210ee25f00e6"
+    }
+  },
+  "started_at": "2026-10-04T20:36:33",
+  "git": {
+    "commit": "af30c2345adb510c0cb15b1e6acb6b9b8fc0fdb4",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T20:51:00",
+  "summary_file": "summary.json"
+}

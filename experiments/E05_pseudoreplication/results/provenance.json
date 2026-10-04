@@ -1,0 +1,67 @@
+{
+  "kind": "experiment",
+  "name": "E05",
+  "data_origin": "real",
+  "params": {
+    "layers": [
+      "L3",
+      "L5",
+      "WM"
+    ],
+    "n_effect_genes": 200,
+    "thinning": 0.5,
+    "min_cells": 10,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "dlpfc_all": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/dlpfc_all.h5ad",
+      "bytes": 1331528080,
+      "sha256": "0d135ba65586f2e1f7ef5f99d40be163071496a80cbd9a5e1002210ee25f00e6"
+    },
+    "GSE214349_reconstructed_3d": {
+      "path": "~/data/GSE214349/prepared/GSE214349_reconstructed_3d.h5ad",
+      "bytes": 2312751450,
+      "sha256": "4f76f1212564348e6e36bb0d391322ea0dc1da9cea588d6e03bf68a2a0167ad1"
+    }
+  },
+  "started_at": "2026-10-04T18:48:02",
+  "git": {
+    "commit": "a00d01db43d8e97cf9b7573535a5a553f06a0739",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T19:33:13",
+  "summary_file": "summary.json"
+}

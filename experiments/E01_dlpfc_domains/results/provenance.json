@@ -1,0 +1,115 @@
+{
+  "kind": "experiment",
+  "name": "E01",
+  "data_origin": "real",
+  "params": {
+    "k_nn": 6,
+    "lam": 0.8,
+    "hops": 2,
+    "n_pcs": 30,
+    "n_hvg": 3000,
+    "refine": true,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "dlpfc_151507": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151507.h5ad",
+      "bytes": 99037548,
+      "sha256": "28763fa953bc47fc17033a0180b037214e583caae99a7cb3e931217de5acd597"
+    },
+    "dlpfc_151508": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151508.h5ad",
+      "bytes": 87266932,
+      "sha256": "a66a4dadf8806f588d4565b9b9d29bec994227e25447abe059ca5476d091039e"
+    },
+    "dlpfc_151509": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151509.h5ad",
+      "bytes": 113620312,
+      "sha256": "cb8036d74d4b77a43159d6cf58a54e0e5e0820538dce293ee6160d585a7db146"
+    },
+    "dlpfc_151510": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151510.h5ad",
+      "bytes": 105189644,
+      "sha256": "c02189da94dea2f228fc5f1b419e40a369c44b4afd7174da5dd590de2c8dca31"
+    },
+    "dlpfc_151669": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151669.h5ad",
+      "bytes": 109083944,
+      "sha256": "91e44f3bf9463f5b8f8150034d5a43b8efdabeacb7245d57bc504826798d5d26"
+    },
+    "dlpfc_151670": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151670.h5ad",
+      "bytes": 97363628,
+      "sha256": "923d53981fd1be1b0afbaea1ac8a75fce5d8739d844dbaf3a93aa226ee5cc188"
+    },
+    "dlpfc_151671": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151671.h5ad",
+      "bytes": 125892124,
+      "sha256": "dc7217496b40584dcaf318a264b7b7cee3277269788bf712f65ae36569131684"
+    },
+    "dlpfc_151672": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151672.h5ad",
+      "bytes": 116613072,
+      "sha256": "ff35fb0248041879af6f5737ecbb64eaabd56177c430288d93978771cf7c0cb3"
+    },
+    "dlpfc_151673": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151673.h5ad",
+      "bytes": 131966928,
+      "sha256": "ad87c4880bbf61b1893ec4a296676bf252e1e2992bb847b75e03df611d5c3b2f"
+    },
+    "dlpfc_151674": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151674.h5ad",
+      "bytes": 162178720,
+      "sha256": "606c891c98b9fb7280bfe320056353d3b66f52f8c020ca7bc48ae4d90beea601"
+    },
+    "dlpfc_151675": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151675.h5ad",
+      "bytes": 107494612,
+      "sha256": "70098e3100ab49d9f51f16cc1f526772df24ebc26817ef12627ea8ded50bffe2"
+    },
+    "dlpfc_151676": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dlpfc/151676.h5ad",
+      "bytes": 110816820,
+      "sha256": "e57d5c674a5dcc4283ab1ac56b5127c6ccfa59831fa6dfa7fc851fc63c5c7a74"
+    }
+  },
+  "started_at": "2026-10-04T18:29:56",
+  "git": {
+    "commit": "a00d01db43d8e97cf9b7573535a5a553f06a0739",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T21:02:38",
+  "summary_file": "summary.json"
+}

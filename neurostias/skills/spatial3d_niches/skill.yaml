@@ -1,0 +1,35 @@
+name: spatial3d.niches
+category: spatial3d
+description: 'Spatial niches: cluster observations by the cell-class composition of their 2D/3D neighbourhood.'
+entry: neurostias.skills_impl:niches_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: label_key
+  type: str
+  default: neuro_class
+- name: n_niches
+  type: int
+  default: 6
+- name: k
+  type: int
+  default: 15
+- name: z_scale
+  type: float
+  default: 1.0
+  description: Multiplier on z before neighbour search (0 = per-section 2D)
+- name: section_key
+  type: str
+  description: obs column with section/slice IDs (for per-section plots and 2D graphs)
+- name: block_key
+  type: str
+  description: obs column with independent samples (animal/donor); edges never cross samples
+- name: save_h5ad
+  type: bool
+  default: true
+  description: Write the updated AnnData to the run folder
+outputs:
+- niche_composition.csv
+- niches.png

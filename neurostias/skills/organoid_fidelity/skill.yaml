@@ -1,0 +1,38 @@
+name: organoid.fidelity
+category: organoid
+description: 'Compare brain-organoid single-cell data with a primary developing-brain reference: label
+  transfer with confidence, region identity of clusters (VoxHunt-style correlation), transcriptomic fidelity,
+  neurodevelopmental stage/maturation, and glycolysis/ER cell-stress programmes.'
+entry: neurostias.skills_impl:organoid_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Organoid AnnData
+- name: reference
+  type: h5ad
+  required: true
+  description: Primary reference AnnData
+- name: label_key
+  type: str
+  required: true
+  description: Reference cell-type column
+- name: region_key
+  type: str
+  description: Reference brain-region column
+- name: age_key
+  type: str
+  description: Reference age column (numeric)
+- name: cluster_key
+  type: str
+  default: leiden
+- name: save_h5ad
+  type: bool
+  default: true
+outputs:
+- organoid_cell_scores.csv
+- region_identity.png
+references:
+- He et al. 2024 Nature (HNOCA)
+- Fleck et al. 2021 (VoxHunt)
+- Bhaduri et al. 2020 Nature (organoid cell stress)

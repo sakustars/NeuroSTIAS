@@ -1,0 +1,30 @@
+name: imaging.connectome
+category: imaging
+description: Functional connectomes from regional fMRI time series (correlation/partial/tangent), graph
+  metrics (clustering, efficiency, modularity) and cross-validated group classification.
+entry: neurostias.skills_impl:connectome_skill
+requires:
+- nilearn
+inputs:
+- name: timeseries_npz
+  type: path
+  required: true
+  description: .npz with 'timeseries' (list of T x R arrays) and optional 'labels'
+- name: kind
+  type: str
+  default: tangent
+  choices:
+  - correlation
+  - partial correlation
+  - tangent
+- name: label_key
+  type: str
+  default: labels
+- name: density
+  type: float
+  default: 0.15
+outputs:
+- graph_metrics.csv
+references:
+- Dadi et al. 2019 NeuroImage
+- Abraham et al. 2014 (nilearn)

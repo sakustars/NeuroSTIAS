@@ -1,0 +1,20 @@
+name: morphology.swc
+category: morphology
+description: Neuron morphometrics (total/axonal/dendritic length, branch points, tips, stems, path and
+  radial extent) and Sholl analysis for one SWC file or a folder of SWC files.
+entry: neurostias.skills_impl:morphology_skill
+inputs:
+- name: input
+  type: path
+  required: true
+  description: SWC file or folder
+- name: sholl_step
+  type: float
+  default: 10.0
+outputs:
+- morphometrics.csv
+- sholl.csv
+- sholl.png
+references:
+- Sholl 1953 J Anat
+- NeuroM (BBP)

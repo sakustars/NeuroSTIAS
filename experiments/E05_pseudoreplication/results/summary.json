@@ -1,0 +1,82 @@
+{
+  "id": "E05",
+  "title": "Pseudoreplication and false-positive control in spatial differential expression",
+  "question": "Do spot-level tests (the common default and 3D-STIAS V4.4.1) produce false discoveries when groups differ only by section/donor, and does replicate-aware pseudobulk testing control them?",
+  "data_origin": "real",
+  "baseline_status": {},
+  "notes": [
+    "Part B is semi-synthetic: real counts with a known effect added by binomial thinning; it is labelled so in every file name.",
+    "Splits are balanced within donor so donor effects are not confounded with group; remaining false positives from spot-level tests come from section-level variation treated as replication.",
+    "Genes expressed in at least 5% of spots of the layer are tested."
+  ],
+  "part_a_null": [
+    {
+      "method": "pseudobulk_donor",
+      "median_false_discoveries": 0.0,
+      "mean_false_discoveries": 0.05555555555555555,
+      "frac_splits_with_any_fd": 0.05555555555555555,
+      "mean_frac_p_below_005": 0.04270074917910269,
+      "n_tests": 90
+    },
+    {
+      "method": "pseudobulk_section",
+      "median_false_discoveries": 0.0,
+      "mean_false_discoveries": 0.0,
+      "frac_splits_with_any_fd": 0.0,
+      "mean_frac_p_below_005": 0.018742207677356324,
+      "n_tests": 90
+    },
+    {
+      "method": "ttest_spot_v441",
+      "median_false_discoveries": 584.5,
+      "mean_false_discoveries": 1044.4555555555555,
+      "frac_splits_with_any_fd": 1.0,
+      "mean_frac_p_below_005": 0.2591716601894155,
+      "n_tests": 90
+    },
+    {
+      "method": "wilcoxon_spot",
+      "median_false_discoveries": 1935.5,
+      "mean_false_discoveries": 2297.0333333333333,
+      "frac_splits_with_any_fd": 1.0,
+      "mean_frac_p_below_005": 0.40940251047812265,
+      "n_tests": 90
+    }
+  ],
+  "part_b_power_semi_synthetic": [
+    {
+      "method": "pseudobulk_donor",
+      "mean_sensitivity": 0.0007777777777777778,
+      "mean_fdp": 0.03333333333333333,
+      "median_called": 0.0
+    },
+    {
+      "method": "pseudobulk_section",
+      "mean_sensitivity": 0.6403888888888889,
+      "mean_fdp": 0.0075359772097139495,
+      "median_called": 161.0
+    },
+    {
+      "method": "ttest_spot_v441",
+      "mean_sensitivity": 0.992611111111111,
+      "mean_fdp": 0.7015319443613265,
+      "median_called": 879.0
+    },
+    {
+      "method": "wilcoxon_spot",
+      "mean_sensitivity": 0.9850000000000001,
+      "mean_fdp": 0.8058082813404759,
+      "median_called": 2149.0
+    }
+  ],
+  "part_c_design_audit": {
+    "n_spots_ivh_d1": 18835,
+    "n_spots_control": 6388,
+    "n_mice_per_group": 1,
+    "n_genes_tested": 11910,
+    "wilcoxon_spot_n_fdr05": 8495,
+    "pseudobulk_result": "insufficient_replicates"
+  },
+  "quick_mode": false,
+  "runtime_seconds": 2710.8
+}

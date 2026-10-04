@@ -1,0 +1,36 @@
+name: core.preprocess
+category: core
+description: Standard QC, normalisation, HVG selection, PCA, neighbour graph, Leiden clustering and UMAP
+  (Scanpy; 3D-STIAS V4.4.1 defaults).
+entry: neurostias.skills_impl:preprocess_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: min_genes
+  type: int
+  default: 200
+- name: min_cells
+  type: int
+  default: 3
+- name: max_pct_mt
+  type: float
+  default: 20.0
+- name: n_top_genes
+  type: int
+  default: 2000
+- name: n_pcs
+  type: int
+  default: 50
+- name: n_neighbors
+  type: int
+  default: 15
+- name: leiden_resolution
+  type: float
+  default: 1.0
+outputs:
+- preprocessed.h5ad
+- umap_leiden.png
+references:
+- Wolf et al. 2018 Genome Biol (Scanpy)

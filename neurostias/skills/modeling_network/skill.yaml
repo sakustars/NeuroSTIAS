@@ -1,0 +1,28 @@
+name: modeling.network
+category: modeling
+description: Sparse excitatory-inhibitory LIF network (Brunel 2000) with adjustable inhibition/excitation
+  scaling for virtual perturbations; reports rates, irregularity and synchrony.
+entry: neurostias.skills_impl:network_skill
+inputs:
+- name: N_E
+  type: int
+  default: 2000
+- name: g
+  type: float
+  default: 5.0
+- name: eta
+  type: float
+  default: 2.0
+- name: T
+  type: float
+  default: 1000.0
+- name: scale_inhibition
+  type: float
+  default: 1.0
+- name: scale_excitation
+  type: float
+  default: 1.0
+outputs:
+- population_rate.png
+references:
+- Brunel 2000 J Comput Neurosci

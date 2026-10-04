@@ -1,0 +1,34 @@
+name: spatial3d.svg
+category: spatial3d
+description: Spatially variable genes by Moran's I on a within-sample 2D/3D kNN graph, with within-sample
+  permutation p-values and BH-FDR.
+entry: neurostias.skills_impl:svg_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: n_top_genes
+  type: int
+  default: 500
+- name: k
+  type: int
+  default: 8
+- name: z_scale
+  type: float
+  default: 1.0
+  description: Multiplier on z before neighbour search (0 = per-section 2D)
+- name: n_permutations
+  type: int
+  default: 199
+- name: section_key
+  type: str
+  description: obs column with section/slice IDs (for per-section plots and 2D graphs)
+- name: block_key
+  type: str
+  description: obs column with independent samples (animal/donor); edges never cross samples
+outputs:
+- spatially_variable_genes.csv
+- top_svg.png
+references:
+- Moran 1950 Biometrika

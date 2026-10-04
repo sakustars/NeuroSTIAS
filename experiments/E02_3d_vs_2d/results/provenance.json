@@ -1,0 +1,65 @@
+{
+  "kind": "experiment",
+  "name": "E02",
+  "data_origin": "real",
+  "params": {
+    "um_per_px_dlpfc": 0.7299270072992701,
+    "z_scales": [
+      0.25,
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "k_nn": 6,
+    "k_between": 3,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "merfish_moffitt2018": {
+      "path": "data/merfish_hypothalamus/merfish_moffitt2018.h5ad",
+      "bytes": 51577387,
+      "sha256": "371723d48413ba76aba49ccf7ea24867b1db940529216fe2902484f5c2a48904"
+    }
+  },
+  "started_at": "2026-10-04T23:03:25",
+  "git": {
+    "commit": "34d34eb6fe2b9d01e00f30fdfe9fb76191036945",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T23:03:29",
+  "summary_file": "summary.json"
+}

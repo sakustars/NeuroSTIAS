@@ -1,0 +1,55 @@
+{
+  "kind": "experiment",
+  "name": "E10",
+  "data_origin": "real",
+  "params": {
+    "cv": "10-fold x 5",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "neuromorpho_metadata": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/neuromorpho/selected_metadata.csv",
+      "bytes": 78033,
+      "sha256": "ff698c2c20c2cf21f32cfdb08cd39a08e7ed828949787f016cb601393f220e75"
+    }
+  },
+  "started_at": "2026-10-04T19:04:14",
+  "git": {
+    "commit": "781352e49b292383642d1ee4e154551f9a7966b7",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T19:05:02",
+  "summary_file": "summary.json"
+}

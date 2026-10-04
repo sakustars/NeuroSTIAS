@@ -1,0 +1,23 @@
+name: legacy.ml
+category: legacy
+description: Random-forest cell-type prediction with section/sample-grouped validation and a label-permutation
+  control.
+entry: neurostias.skills_impl:ml_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: label_key
+  type: str
+  required: true
+- name: group_key
+  type: str
+- name: n_label_permutations
+  type: int
+  default: 20
+- name: use_coordinates
+  type: bool
+  default: true
+outputs:
+- results.json

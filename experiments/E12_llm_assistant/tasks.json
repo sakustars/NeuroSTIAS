@@ -1,0 +1,1226 @@
+{
+ "created": "2026-10-04",
+ "note": "written before any model was evaluated; dataset paths switched from a private dataset to public DLPFC before evaluation",
+ "items": [
+  {
+   "id": "q001",
+   "question": "Give me a quick summary of the dataset at data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q002",
+   "question": "How many cells and genes are in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q003",
+   "question": "What metadata columns does data/dlpfc/dlpfc_all.h5ad contain?",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q004",
+   "question": "Which species is the file data/dlpfc/dlpfc_all.h5ad from, and does it have 3D coordinates?",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q005",
+   "question": "Inspect data/dlpfc/151673.h5ad and tell me its size.",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q006",
+   "question": "Describe the structure of data/merfish_hypothalamus/merfish_moffitt2018.h5ad.",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/merfish_hypothalamus/merfish_moffitt2018.h5ad"
+   }
+  },
+  {
+   "id": "q007",
+   "question": "Before analysing, summarise what is inside data/dlpfc/151673.h5ad.",
+   "gold_skill": "core.inspect",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q008",
+   "question": "Which brain cell types are present in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q009",
+   "question": "Annotate the cell classes in data/dlpfc/dlpfc_all.h5ad with brain marker panels.",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q010",
+   "question": "Identify neurons, astrocytes, oligodendrocytes and microglia in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q011",
+   "question": "Label each spot of data/dlpfc/151673.h5ad with its major brain cell class.",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q012",
+   "question": "What fraction of observations in data/dlpfc/dlpfc_all.h5ad are oligodendrocytes?",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q013",
+   "question": "Run cell-type annotation on data/merfish_hypothalamus/merfish_moffitt2018.h5ad.",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/merfish_hypothalamus/merfish_moffitt2018.h5ad"
+   }
+  },
+  {
+   "id": "q014",
+   "question": "Which neurotransmitter identities can be detected in data/dlpfc/151673.h5ad?",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q015",
+   "question": "Can you tell excitatory from inhibitory neurons in data/dlpfc/151673.h5ad?",
+   "gold_skill": "atlas.annotate",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q016",
+   "question": "Find spatial domains in data/dlpfc/151673.h5ad.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q017",
+   "question": "Segment the tissue in data/dlpfc/151673.h5ad into cortical layers.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q018",
+   "question": "Detect 7 spatial domains in data/dlpfc/151673.h5ad.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q019",
+   "question": "Cluster data/dlpfc/151673.h5ad into spatial regions using neighbourhood information.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q020",
+   "question": "Identify white matter and grey matter domains in data/dlpfc/151673.h5ad.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q021",
+   "question": "Run spatial domain detection on data/dlpfc/dlpfc_all.h5ad in 3D.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q022",
+   "question": "Partition data/dlpfc/151673.h5ad into layer-like spatial domains.",
+   "gold_skill": "spatial3d.domains",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q023",
+   "question": "Which genes are spatially variable in data/dlpfc/151673.h5ad?",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q024",
+   "question": "Compute Moran's I for genes in data/dlpfc/151673.h5ad.",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q025",
+   "question": "Find genes with spatial patterns in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q026",
+   "question": "List the top spatially autocorrelated genes in data/dlpfc/151673.h5ad.",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q027",
+   "question": "Test spatial autocorrelation of gene expression in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q028",
+   "question": "Which genes show the strongest spatial structure in data/dlpfc/151673.h5ad?",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q029",
+   "question": "Run a spatially variable gene analysis on data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.svg",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q030",
+   "question": "Find spatial niches based on neighbourhood cell composition in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q031",
+   "question": "Group spots of data/dlpfc/dlpfc_all.h5ad into niches by the cell classes around them.",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q032",
+   "question": "What tissue niches exist in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q033",
+   "question": "Cluster neighbourhood composition in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q034",
+   "question": "Identify microenvironments in data/dlpfc/dlpfc_all.h5ad from local cell-type mixtures.",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q035",
+   "question": "Compute spatial niches for data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q036",
+   "question": "Which niches combine astrocytes and vascular cells in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "spatial3d.niches",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q037",
+   "question": "Infer cell-cell communication between neighbouring cell classes in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q038",
+   "question": "Which neurotransmitter signals are exchanged between cell types in data/dlpfc/151673.h5ad?",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q039",
+   "question": "Is there neuron-to-microglia fractalkine signalling in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q040",
+   "question": "Run spatial ligand-receptor analysis on data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q041",
+   "question": "Find significant neuropeptide interactions in data/merfish_hypothalamus/merfish_moffitt2018.h5ad.",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/merfish_hypothalamus/merfish_moffitt2018.h5ad"
+   }
+  },
+  {
+   "id": "q042",
+   "question": "Which cell classes communicate via glutamate in data/dlpfc/151673.h5ad?",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q043",
+   "question": "Analyse neurovascular signalling between neighbouring spots in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "spatial3d.communication",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q044",
+   "question": "Register the serial sections in data/dlpfc/dlpfc_all.h5ad (section column 'section') and build 3D coordinates.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q045",
+   "question": "Align the sections of data/dlpfc/dlpfc_all.h5ad using the 'section' column and stack them in 3D.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q046",
+   "question": "Reconstruct a 3D volume from data/dlpfc/dlpfc_all.h5ad; sections are in obs column 'section'.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q047",
+   "question": "Do rigid registration of consecutive sections in data/dlpfc/dlpfc_all.h5ad with section_key section.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q048",
+   "question": "Build spatial_3d coordinates for data/dlpfc/dlpfc_all.h5ad, sections given by 'section', spacing 20 um.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q049",
+   "question": "Stack the slices in data/dlpfc/dlpfc_all.h5ad (column section) into 3D.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q050",
+   "question": "Rigidly align adjacent sections in data/dlpfc/dlpfc_all.h5ad using the section column.",
+   "gold_skill": "spatial3d.reconstruct",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "section_key": "section"
+   }
+  },
+  {
+   "id": "q051",
+   "question": "Compare L3 vs WM in data/dlpfc/dlpfc_all.h5ad (column layer) with replicates defined by 'donor', using pseudobulk.",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q052",
+   "question": "Run replicate-aware differential expression of L3 versus WM (layer) in data/dlpfc/dlpfc_all.h5ad, replicate column donor.",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q053",
+   "question": "Pseudobulk DE in data/dlpfc/dlpfc_all.h5ad: group_key layer, L3 vs WM, replicates in 'donor'.",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q054",
+   "question": "Which genes differ between L3 and WM spots in data/dlpfc/dlpfc_all.h5ad when donors are treated as replicates?",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q055",
+   "question": "Test L3 against WM (obs layer) in data/dlpfc/dlpfc_all.h5ad with donor as the biological unit.",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q056",
+   "question": "Do a pseudoreplication-safe DE between L3 and WM in data/dlpfc/dlpfc_all.h5ad; replicate key donor.",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q057",
+   "question": "Differential expression with pseudobulk: data/dlpfc/dlpfc_all.h5ad, layer L3 vs WM, replicate_key donor.",
+   "gold_skill": "stats.replicate_de",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "group_key": "layer",
+    "group_a": "L3",
+    "group_b": "WM",
+    "replicate_key": "donor"
+   }
+  },
+  {
+   "id": "q058",
+   "question": "Build a transcription-factor co-expression network for data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q059",
+   "question": "Which neural transcription factors are co-expressed with variable genes in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q060",
+   "question": "Infer a gene regulatory network in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q061",
+   "question": "Run TF-target correlation analysis on data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q062",
+   "question": "Find TF hubs in data/dlpfc/151673.h5ad.",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q063",
+   "question": "Construct a neural TF network from data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q064",
+   "question": "Which TFs correlate with myelination genes in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "legacy.grn",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q065",
+   "question": "Score neurodevelopmental stages (progenitors vs mature neurons) in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q066",
+   "question": "How mature are the neurons in data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q067",
+   "question": "Compute a neuronal maturation index for data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q068",
+   "question": "Which cells in data/dlpfc/dlpfc_all.h5ad look like radial glia or intermediate progenitors?",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q069",
+   "question": "Score stemness and developmental stage in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q070",
+   "question": "Estimate progenitor versus neuron programmes in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q071",
+   "question": "Run neurodevelopmental stage scoring on data/dlpfc/151673.h5ad.",
+   "gold_skill": "legacy.development",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q072",
+   "question": "Infer pseudotime in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q073",
+   "question": "Compute a developmental trajectory for data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q074",
+   "question": "Run diffusion pseudotime on data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q075",
+   "question": "Order the cells of data/dlpfc/dlpfc_all.h5ad along a trajectory.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q076",
+   "question": "Estimate pseudotime in data/dlpfc/dlpfc_all.h5ad starting from radial glia.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q077",
+   "question": "Do trajectory inference on data/dlpfc/151673.h5ad.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/151673.h5ad"
+   }
+  },
+  {
+   "id": "q078",
+   "question": "Compute DPT pseudotime for data/dlpfc/dlpfc_all.h5ad with a sensitivity analysis.",
+   "gold_skill": "legacy.trajectory",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad"
+   }
+  },
+  {
+   "id": "q079",
+   "question": "Train a classifier to predict layer in data/dlpfc/dlpfc_all.h5ad and report accuracy.",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q080",
+   "question": "How well can a random forest predict the layer labels of data/dlpfc/dlpfc_all.h5ad?",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q081",
+   "question": "Run machine-learning cell-type prediction on data/dlpfc/dlpfc_all.h5ad (label column layer).",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q082",
+   "question": "Validate layer predictability in data/dlpfc/dlpfc_all.h5ad with a label-permutation control.",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q083",
+   "question": "Predict layer in data/dlpfc/dlpfc_all.h5ad from expression and coordinates.",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q084",
+   "question": "Fit a model for layer on data/dlpfc/dlpfc_all.h5ad and give the held-out accuracy.",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q085",
+   "question": "Estimate classification accuracy of layer in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.ml",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "label_key": "layer"
+   }
+  },
+  {
+   "id": "q086",
+   "question": "Simulate a Hodgkin-Huxley neuron and give its f-I curve.",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q087",
+   "question": "What is the firing rate of a Hodgkin-Huxley neuron at 10 uA/cm2?",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q088",
+   "question": "Simulate a HH neuron with sodium channels blocked (TTX).",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q089",
+   "question": "Compute the f-I curve of the Hodgkin-Huxley model with potassium conductance halved.",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q090",
+   "question": "At what current does the Hodgkin-Huxley model start firing repetitively?",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q091",
+   "question": "Run a Hodgkin-Huxley simulation for currents 5, 10 and 20 uA/cm2.",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q092",
+   "question": "Show how TTX affects Hodgkin-Huxley firing.",
+   "gold_skill": "modeling.hh",
+   "gold_params": {}
+  },
+  {
+   "id": "q093",
+   "question": "Simulate a Brunel excitatory-inhibitory network.",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q094",
+   "question": "What happens to network synchrony when inhibition is reduced by half?",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q095",
+   "question": "Run an E-I spiking network with g=4.5 and eta=0.9.",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q096",
+   "question": "Simulate a balanced LIF network and report the mean firing rate.",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q097",
+   "question": "Model the effect of reduced GABAergic drive on a spiking network.",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q098",
+   "question": "Run a sparse E/I network simulation for 1 second.",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q099",
+   "question": "How irregular is firing in a Brunel network with g=5 and eta=2?",
+   "gold_skill": "modeling.network",
+   "gold_params": {}
+  },
+  {
+   "id": "q100",
+   "question": "Compute morphometrics for the SWC files in data/neuromorpho/swc.",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q101",
+   "question": "Run Sholl analysis on the neurons in data/neuromorpho/swc.",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q102",
+   "question": "What is the median dendritic length of the neurons in data/neuromorpho/swc?",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q103",
+   "question": "Analyse neuron morphology in data/neuromorpho/swc.",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q104",
+   "question": "How many branch points do the reconstructions in data/neuromorpho/swc have?",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q105",
+   "question": "Measure total neurite length for SWC files in data/neuromorpho/swc.",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q106",
+   "question": "Compare branching across the reconstructions in data/neuromorpho/swc.",
+   "gold_skill": "morphology.swc",
+   "gold_params": {
+    "input": "data/neuromorpho/swc"
+   }
+  },
+  {
+   "id": "q107",
+   "question": "Compute firing statistics for the units in data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb.",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q108",
+   "question": "What is the median firing rate of units in data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb?",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q109",
+   "question": "Run spike-train quality control on data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb.",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q110",
+   "question": "How many units in data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb violate the refractory period?",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q111",
+   "question": "Analyse ISI variability of the neurons in data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb.",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q112",
+   "question": "Summarise unit firing properties in data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb.",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q113",
+   "question": "Compute Fano factors for units in data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb.",
+   "gold_skill": "ephys.spikes",
+   "gold_params": {
+    "input": "data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb"
+   }
+  },
+  {
+   "id": "q114",
+   "question": "What ions flow through AMPA receptors?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q115",
+   "question": "Which enzyme synthesises GABA from glutamate?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q116",
+   "question": "What is the function of the vesicular glutamate transporter?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q117",
+   "question": "Which cortical layer contains most corticospinal projection neurons?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q118",
+   "question": "What does the Hodgkin-Huxley model describe?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q119",
+   "question": "What is the role of microglial CX3CR1?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q120",
+   "question": "Why is pseudobulk analysis recommended for multi-sample single-cell data?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q121",
+   "question": "What marks oligodendrocyte precursor cells?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q122",
+   "question": "What is Moran's I?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q123",
+   "question": "What does tetrodotoxin block?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q124",
+   "question": "Which interneuron class expresses parvalbumin and fires fast?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q125",
+   "question": "What is the blood-brain barrier made of?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q126",
+   "question": "Name a marker of reactive astrocytes.",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q127",
+   "question": "What are radial glia?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q128",
+   "question": "What does a Sholl analysis measure?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q129",
+   "question": "Explain the difference between excitatory and inhibitory synapses.",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q130",
+   "question": "What is the dentate gyrus marker PROX1?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q131",
+   "question": "What does the NMDA receptor need besides glutamate to open?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q132",
+   "question": "What is an intraventricular haemorrhage?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q133",
+   "question": "What is a brain organoid?",
+   "gold_skill": "none",
+   "gold_params": {}
+  },
+  {
+   "id": "q134",
+   "question": "Run gene-set enrichment on the DE table ../results/differential_expression/de_results_Region_0_vs_Region_1.csv (gene column gene, score column log2FoldChange, padj column padj).",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q135",
+   "question": "Which neuroscience pathways are enriched in ../results/differential_expression/de_results_Region_0_vs_Region_1.csv? Columns: gene, log2FoldChange, padj.",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q136",
+   "question": "Do an ORA and GSEA on ../results/differential_expression/de_results_Region_0_vs_Region_1.csv using the neuro gene sets (score_col log2FoldChange).",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q137",
+   "question": "Are synaptic gene sets enriched among up-regulated genes in ../results/differential_expression/de_results_Region_0_vs_Region_1.csv? score column log2FoldChange.",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q138",
+   "question": "Test myelination and BBB gene sets on ../results/differential_expression/de_results_Region_0_vs_Region_1.csv (log2FoldChange, padj).",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q139",
+   "question": "Enrichment analysis for ../results/differential_expression/de_results_Region_0_vs_Region_1.csv, gene_col gene, score_col log2FoldChange, padj_col padj.",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q140",
+   "question": "Which brain cell-type programmes are enriched in ../results/differential_expression/de_results_Region_0_vs_Region_1.csv? Use log2FoldChange as the ranking score.",
+   "gold_skill": "legacy.enrichment",
+   "gold_params": {
+    "de_table": "../results/differential_expression/de_results_Region_0_vs_Region_1.csv",
+    "score_col": "log2FoldChange"
+   }
+  },
+  {
+   "id": "q141",
+   "question": "Score metabolic programmes such as the lactate shuttle in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "metabolic"
+   }
+  },
+  {
+   "id": "q142",
+   "question": "Compute glycolysis and oxidative phosphorylation scores for data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "metabolic"
+   }
+  },
+  {
+   "id": "q143",
+   "question": "Deconvolve cell-class proportions in data/dlpfc/dlpfc_all.h5ad with NNLS.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "deconvolution"
+   }
+  },
+  {
+   "id": "q144",
+   "question": "Estimate the mixture of brain cell classes in each spot of data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "deconvolution"
+   }
+  },
+  {
+   "id": "q145",
+   "question": "Make a tissue overview figure for data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "overview"
+   }
+  },
+  {
+   "id": "q146",
+   "question": "Find colocalised gene pairs in data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "colocalization"
+   }
+  },
+  {
+   "id": "q147",
+   "question": "Run the virtual intervention sandbox on data/dlpfc/dlpfc_all.h5ad.",
+   "gold_skill": "legacy.misc",
+   "gold_params": {
+    "input": "data/dlpfc/dlpfc_all.h5ad",
+    "analysis": "intervention"
+   }
+  },
+  {
+   "id": "q148",
+   "question": "Compute EEG band power for data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf.",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  },
+  {
+   "id": "q149",
+   "question": "What is the relative alpha power per channel in data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf?",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  },
+  {
+   "id": "q150",
+   "question": "Calculate delta, theta, alpha, beta and gamma power in data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf.",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  },
+  {
+   "id": "q151",
+   "question": "Run a spectral analysis of the EEG recording data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf.",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  },
+  {
+   "id": "q152",
+   "question": "Which channels in data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf have the most beta power?",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  },
+  {
+   "id": "q153",
+   "question": "Give the band power table for data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf.",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  },
+  {
+   "id": "q154",
+   "question": "Analyse oscillatory power in the EEG file data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf.",
+   "gold_skill": "ephys.eeg_bandpower",
+   "gold_params": {
+    "input": "data/ephys_imaging/eegbci/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R06.edf"
+   }
+  }
+ ]
+}

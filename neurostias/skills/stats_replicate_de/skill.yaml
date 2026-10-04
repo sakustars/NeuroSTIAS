@@ -1,0 +1,32 @@
+name: stats.replicate_de
+category: stats
+description: Differential expression between two groups using pseudobulk profiles per biological replicate
+  (animal/donor), paired when every replicate has both groups. Gives no p-values for unreplicated designs.
+entry: neurostias.skills_impl:replicate_de_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: group_key
+  type: str
+  required: true
+- name: group_a
+  type: str
+  required: true
+- name: group_b
+  type: str
+  required: true
+- name: replicate_key
+  type: str
+  required: true
+- name: min_cells
+  type: int
+  default: 10
+- name: paired
+  type: bool
+  default: true
+outputs:
+- pseudobulk_de.csv
+references:
+- Squair et al. 2021 Nat Commun

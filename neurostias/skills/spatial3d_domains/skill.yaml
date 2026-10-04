@@ -1,0 +1,50 @@
+name: spatial3d.domains
+category: spatial3d
+description: Detect spatial domains (e.g. cortical layers, white matter) from expression plus neighbourhood-averaged
+  expression on an anisotropy-aware 2D/3D graph that never links independent samples.
+entry: neurostias.skills_impl:domains_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: n_domains
+  type: int
+  default: 7
+  description: Number of domains (0 = Leiden)
+- name: z_scale
+  type: float
+  default: 0.0
+  description: 0 = 2D per section; >0 = 3D across sections
+- name: cross_section
+  type: bool
+  default: false
+  description: Guarantee neighbours in adjacent sections
+- name: k_neighbors
+  type: int
+  default: 6
+- name: lam
+  type: float
+  default: 0.8
+- name: hops
+  type: int
+  default: 2
+- name: section_key
+  type: str
+  description: obs column with section/slice IDs (for per-section plots and 2D graphs)
+- name: block_key
+  type: str
+  description: obs column with independent samples (animal/donor); edges never cross samples
+- name: refine
+  type: bool
+  default: true
+- name: save_h5ad
+  type: bool
+  default: true
+  description: Write the updated AnnData to the run folder
+outputs:
+- domains.csv
+- domains.png
+references:
+- Singhal et al. 2024 Nat Genet (BANKSY)
+- Hu et al. 2021 Nat Methods (SpaGCN refinement)

@@ -1,0 +1,320 @@
+{
+  "kind": "experiment",
+  "name": "E08",
+  "data_origin": "real",
+  "params": {
+    "fano_window_s": 1.0,
+    "eeg_band_hz": [
+      8,
+      30
+    ],
+    "cv": "ShuffleSplit(10, 0.2)",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {
+    "sub-anm369962_ses-20170309.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170309.nwb",
+      "bytes": 796920,
+      "sha256": "8d1e87886816241d34c0ca248fc564d325c3aae1a35d0b22e01900ab1bd1a442"
+    },
+    "sub-anm369962_ses-20170310.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170310.nwb",
+      "bytes": 6644036,
+      "sha256": "d01c43576e3aeceed53a052defa8bbbf15b885146f518acf63d228cee44576ac"
+    },
+    "sub-anm369962_ses-20170313.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170313.nwb",
+      "bytes": 11476076,
+      "sha256": "09ce236489f9f3b60257ef9f0ca939ed6b40288e6e3e7ca2bd47c9f4c2b762a0"
+    },
+    "sub-anm369962_ses-20170314.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170314.nwb",
+      "bytes": 7456488,
+      "sha256": "6a94a1a71bc9489ecd846ac687bdcd64d3f83f9080adcd5d0c365450c57b5e5b"
+    },
+    "sub-anm369962_ses-20170316.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170316.nwb",
+      "bytes": 609568,
+      "sha256": "c35c73d0e2b2f3a88520605036fb181eb53d207f554431612c922940b70d2717"
+    },
+    "sub-anm369962_ses-20170317.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369962/sub-anm369962_ses-20170317.nwb",
+      "bytes": 8194336,
+      "sha256": "35ccbeed5575d77e25bdf8cc65d9c8898dc12bc71bfbd836e3cf70d8560726d9"
+    },
+    "sub-anm369963_ses-20170226.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170226.nwb",
+      "bytes": 6393196,
+      "sha256": "ebcdf64353eeb9b605533fdf8ee1c62a710b64e49593fe0f6de2e1ef8715cc7d"
+    },
+    "sub-anm369963_ses-20170227.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170227.nwb",
+      "bytes": 6459808,
+      "sha256": "c2b5876e40f4bcd6ed7d69fffe108a350cf680b2fd48a99d2180b4864ae110de"
+    },
+    "sub-anm369963_ses-20170228.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170228.nwb",
+      "bytes": 276632,
+      "sha256": "796630b7941cd4e42453a28a1224de18005452b0e3a301c035c94142b6463116"
+    },
+    "sub-anm369963_ses-20170301.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170301.nwb",
+      "bytes": 493516,
+      "sha256": "2435b672abaa3731961c41cc914b8c4920dd865d21b6032061ae931cddf9fe4b"
+    },
+    "sub-anm369963_ses-20170302.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170302.nwb",
+      "bytes": 281012,
+      "sha256": "e5c0361eaa9693f42c2846ca3a6c96e488599fefa86f93b9f999de188133bf76"
+    },
+    "sub-anm369963_ses-20170306.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170306.nwb",
+      "bytes": 6666716,
+      "sha256": "e4df2ef55c749fdbea275b23d2c0ffa409ca2ad54a619663b28464fbac82267c"
+    },
+    "sub-anm369963_ses-20170309.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170309.nwb",
+      "bytes": 450860,
+      "sha256": "4aed9101446df3c95c4b1569ebaedc4520bc1c58794382390137bb9c91efc4ee"
+    },
+    "sub-anm369963_ses-20170310.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369963/sub-anm369963_ses-20170310.nwb",
+      "bytes": 604844,
+      "sha256": "fc4314ad75b53442ed6b45369693347572b842311d8eeb8bf9d2b7373670b37c"
+    },
+    "sub-anm369964_ses-20170320.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369964/sub-anm369964_ses-20170320.nwb",
+      "bytes": 7660100,
+      "sha256": "130ee7635334db52b6e36e39d7c889d18b5fc43ae3a1298f1b12984399f26119"
+    },
+    "sub-anm369964_ses-20170321.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369964/sub-anm369964_ses-20170321.nwb",
+      "bytes": 499864,
+      "sha256": "d09645a90a677f345fb6f6cc1a2138c2f66eb9f034ee82ce52a95f4f4c2619fe"
+    },
+    "sub-anm369964_ses-20170322.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369964/sub-anm369964_ses-20170322.nwb",
+      "bytes": 5047600,
+      "sha256": "eecbd6c12f365d26d7b544f1ad9068ceac2da488f4464e7a6c336b69e4cd7b04"
+    },
+    "sub-anm369964_ses-20170323.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm369964/sub-anm369964_ses-20170323.nwb",
+      "bytes": 426444,
+      "sha256": "ee96f2fdb95f6cf98829ad28c24f2803fb27f6955757c8d102fc517556812b96"
+    },
+    "sub-anm372793_ses-20170504.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372793/sub-anm372793_ses-20170504.nwb",
+      "bytes": 357824,
+      "sha256": "cc14bf369f827dddb3837d8d0f2596c806bcede09dd4a271ee0a399e103bccdd"
+    },
+    "sub-anm372793_ses-20170508.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372793/sub-anm372793_ses-20170508.nwb",
+      "bytes": 357424,
+      "sha256": "13e42ab4f9deb1d18877c8f0fc51cc5e44b32f8491d6d6f585fb62a1748f6ecf"
+    },
+    "sub-anm372793_ses-20170512.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372793/sub-anm372793_ses-20170512.nwb",
+      "bytes": 470808,
+      "sha256": "7b839400c33648daad86311ccf8b1c6b0c70660ca0fc30208295c8dc940d8a23"
+    },
+    "sub-anm372793_ses-20170513.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372793/sub-anm372793_ses-20170513.nwb",
+      "bytes": 5519112,
+      "sha256": "175428b13cda15b6c579899d028931e1fe49e3ea4533d383274f0940650bd0ab"
+    },
+    "sub-anm372793_ses-20170514.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372793/sub-anm372793_ses-20170514.nwb",
+      "bytes": 5459688,
+      "sha256": "59c1a56ce21fcad29c6d0c00ae00f8a7c3ddde7f5c17cbeb5c3ec064f75cb849"
+    },
+    "sub-anm372794_ses-20170621.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372794/sub-anm372794_ses-20170621.nwb",
+      "bytes": 654184,
+      "sha256": "1a377918f5847f57f7d15470db24583f7109a89be79b74749b83f85805eabf89"
+    },
+    "sub-anm372794_ses-20170622.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372794/sub-anm372794_ses-20170622.nwb",
+      "bytes": 602808,
+      "sha256": "d298916ebfd8895525146ec9af8e7e6264e9a3ff3111d3114ff19f694a89d38c"
+    },
+    "sub-anm372794_ses-20170624.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372794/sub-anm372794_ses-20170624.nwb",
+      "bytes": 4751624,
+      "sha256": "1af69b8e29f0a74b0c42d70f4b5ab4d5255b5ceb771683d860d8a7460eb216e6"
+    },
+    "sub-anm372794_ses-20170625.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372794/sub-anm372794_ses-20170625.nwb",
+      "bytes": 5684876,
+      "sha256": "23a58889cccc5147b77629170291119a3cc7e9e1ebd886e1c96d43d809017a5e"
+    },
+    "sub-anm372794_ses-20170626.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372794/sub-anm372794_ses-20170626.nwb",
+      "bytes": 4929288,
+      "sha256": "a51d3da08afbd56b2526dc13e3d3efcb76207dd1b3aa8ca344b5a8bbcf55d3ef"
+    },
+    "sub-anm372794_ses-20170627.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372794/sub-anm372794_ses-20170627.nwb",
+      "bytes": 553420,
+      "sha256": "0e1c9d92b2d35b051e481b2e9d63b56242c088522ba4e922663c8f4dff195068"
+    },
+    "sub-anm372795_ses-20170714.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372795/sub-anm372795_ses-20170714.nwb",
+      "bytes": 465540,
+      "sha256": "6248053ecc33dab0a84caf5ce725ff0ed0cab1f0c56e014a90f561bbc3b5d150"
+    },
+    "sub-anm372795_ses-20170715.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372795/sub-anm372795_ses-20170715.nwb",
+      "bytes": 323156,
+      "sha256": "c8680027abe87c9ff76b92e3807134a19066afe625ed31bc108b8c76c9113ee7"
+    },
+    "sub-anm372795_ses-20170716.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372795/sub-anm372795_ses-20170716.nwb",
+      "bytes": 813220,
+      "sha256": "6c01807bfaaa911350a831bfe459827f08aac57eec5037aa3a36eddc8300e6d4"
+    },
+    "sub-anm372795_ses-20170718.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372795/sub-anm372795_ses-20170718.nwb",
+      "bytes": 452348,
+      "sha256": "1464f84e61ab4d2d5329c0e33cfc17adbfc5790d8b605a3a775f73a0d2308703"
+    },
+    "sub-anm372797_ses-20170615.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372797/sub-anm372797_ses-20170615.nwb",
+      "bytes": 5970808,
+      "sha256": "cf5944209e3c58be2637bd2d18532e807bf7d8cc0768b6e19b39d878ec628385"
+    },
+    "sub-anm372797_ses-20170617.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372797/sub-anm372797_ses-20170617.nwb",
+      "bytes": 338864,
+      "sha256": "8369d5cb843038766a8723e519ebea62787ca0c5748a6328299e29bf5be42d50"
+    },
+    "sub-anm372904_ses-20170615.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372904/sub-anm372904_ses-20170615.nwb",
+      "bytes": 388212,
+      "sha256": "6aaaab2311b2f588ab734c4de2bc7c0a427f021f1e74d40f88e37011de7fafe2"
+    },
+    "sub-anm372904_ses-20170616.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372904/sub-anm372904_ses-20170616.nwb",
+      "bytes": 362600,
+      "sha256": "1bdfc680524247945c20bce2353e73e57a83391b499a927fbc78936cb0de17f2"
+    },
+    "sub-anm372904_ses-20170617.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372904/sub-anm372904_ses-20170617.nwb",
+      "bytes": 384920,
+      "sha256": "0d5a4f8956068f10d1f1344d65009929f6bc11fe0e7c5fd14c8f667722b94451"
+    },
+    "sub-anm372904_ses-20170618.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372904/sub-anm372904_ses-20170618.nwb",
+      "bytes": 9378480,
+      "sha256": "393454dcddec5ecb87746b02c41be24f2fb17aa4cb006a4a0c582df491b0a097"
+    },
+    "sub-anm372904_ses-20170619.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372904/sub-anm372904_ses-20170619.nwb",
+      "bytes": 4100256,
+      "sha256": "8dd6b41adc3de11952332e9af7964442f1facc7461fe0ef966ff729372f37ac7"
+    },
+    "sub-anm372905_ses-20170715.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372905/sub-anm372905_ses-20170715.nwb",
+      "bytes": 344024,
+      "sha256": "2eab5196f0d989c9a262752572f4ec59dfcd2b37e87982245b7382d817c3fcb0"
+    },
+    "sub-anm372905_ses-20170716.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372905/sub-anm372905_ses-20170716.nwb",
+      "bytes": 554044,
+      "sha256": "4d3e2e34de2cb2b99ca2ab6c8d0d90e764d47313b88839fd4cf28215d86f90e6"
+    },
+    "sub-anm372905_ses-20170717.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372905/sub-anm372905_ses-20170717.nwb",
+      "bytes": 448436,
+      "sha256": "eec6ab07e54cef86e378534a189e3bd446322e4cd05fd108bf7cca1200c711c2"
+    },
+    "sub-anm372906_ses-20170608.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372906/sub-anm372906_ses-20170608.nwb",
+      "bytes": 6942912,
+      "sha256": "166bcd11f08a239ee953fb25e1d00ed0fbde3c553594e59cbc3601468c7381ac"
+    },
+    "sub-anm372906_ses-20170610.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372906/sub-anm372906_ses-20170610.nwb",
+      "bytes": 374788,
+      "sha256": "6f8d6b4a2f4fc42da1ececf92908c1f2a2dd3503bd6a88f9b154de9d44efdc61"
+    },
+    "sub-anm372906_ses-20170611.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372906/sub-anm372906_ses-20170611.nwb",
+      "bytes": 338652,
+      "sha256": "a846ffaeeca5590f8c9910980c3065e9078a6cf6f393533a7164901fb38427d8"
+    },
+    "sub-anm372906_ses-20170612.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372906/sub-anm372906_ses-20170612.nwb",
+      "bytes": 324348,
+      "sha256": "301ce1094de83b313209a81a05bb6cc45577e430483a4a6bf94984c886c272f7"
+    },
+    "sub-anm372907_ses-20170608.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372907/sub-anm372907_ses-20170608.nwb",
+      "bytes": 438876,
+      "sha256": "a39b5d369f70b7d0841aa5031a77e05bc13ed5ad849260674233e2dc651de34f"
+    },
+    "sub-anm372907_ses-20170610.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372907/sub-anm372907_ses-20170610.nwb",
+      "bytes": 349728,
+      "sha256": "e18a828267b77aed0079486f1fd889fd242de52e216094f4340ed960277fb3ee"
+    },
+    "sub-anm372907_ses-20170612.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372907/sub-anm372907_ses-20170612.nwb",
+      "bytes": 444520,
+      "sha256": "bbd6e82fee268f3e207289ad52375dcf70f282fd14e5f20890dff6071e79863b"
+    },
+    "sub-anm372907_ses-20170613.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372907/sub-anm372907_ses-20170613.nwb",
+      "bytes": 258992,
+      "sha256": "974be4e6bb774eeef4075e4920db664cd2d9499d41278a953fc72e81ebaec846"
+    },
+    "sub-anm372909_ses-20170520.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372909/sub-anm372909_ses-20170520.nwb",
+      "bytes": 352892,
+      "sha256": "6b88c9d7f093a363e5cb98562af04fefd7fd6f4921b13449c125cf9011d90a4a"
+    },
+    "sub-anm372909_ses-20170522.nwb": {
+      "path": "~/Desktop/3D-STIAS-Brain-uninterrupted-standalone-fixed-rerun-20260828_211912/NeuroSTIAS/data/dandi_000006/sub-anm372909/sub-anm372909_ses-20170522.nwb",
+      "bytes": 5670812,
+      "sha256": "141d1d9b3b12b079b9e3cfaa1cd19760782d6e7407a7671582a833fb6fe57ab1"
+    }
+  },
+  "started_at": "2026-10-04T19:40:44",
+  "git": {
+    "commit": "232f307d51d2ca3d8a81b79d72559566f76b11b3",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T19:46:02",
+  "summary_file": "summary.json"
+}

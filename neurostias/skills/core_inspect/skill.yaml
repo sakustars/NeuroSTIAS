@@ -1,0 +1,10 @@
+name: core.inspect
+category: core
+description: >
+  Summarise an AnnData (.h5ad) file - cell/gene counts, metadata columns,
+  spatial coordinate dimensions and ranges, sections and replicates, and a
+  species guess. Use this first on any new dataset.
+entry: neurostias.core.skills_impl:inspect_skill
+inputs:
+  - {name: input, type: h5ad, required: true, description: Path to the .h5ad file}
+outputs: [results.json]

@@ -1,0 +1,53 @@
+{
+  "kind": "experiment",
+  "name": "E03",
+  "data_origin": "semi_synthetic",
+  "params": {
+    "drop": 0.1,
+    "jitter_um": 10,
+    "thinning": 0.5,
+    "max_shift_um": 500,
+    "paste_alpha": 0.1,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "seed": null,
+  "inputs": {},
+  "started_at": "2026-10-04T19:37:30",
+  "git": {
+    "commit": "232f307d51d2ca3d8a81b79d72559566f76b11b3",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.12.19",
+    "scanpy": "1.11.5",
+    "squidpy": "1.8.2",
+    "statsmodels": "0.15.0",
+    "networkx": "3.6.1",
+    "mne": "1.13.2",
+    "elephant": "1.2.1",
+    "brian2": "2.9.0",
+    "neurom": "4.0.6",
+    "nilearn": "0.14.1"
+  },
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "cpu": "Apple M4 Pro",
+    "mem_bytes": 25769803776,
+    "n_cpu": 14
+  },
+  "notes": [],
+  "finished_at": "2026-10-04T21:00:41",
+  "summary_file": "summary.json"
+}

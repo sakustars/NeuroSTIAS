@@ -1,0 +1,37 @@
+name: legacy.enrichment
+category: legacy
+description: Offline over-representation (hypergeometric) and pre-ranked GSEA on a DE table using neuroscience
+  gene sets (synapse, myelin, BBB, channels, cell types) or a user GMT file.
+entry: neurostias.skills_impl:enrichment_skill
+inputs:
+- name: de_table
+  type: csv
+  required: true
+  description: DE result CSV
+- name: library
+  type: str
+  default: neuro_v1
+  description: neuro_v1, local_v441 or path to .gmt
+- name: species
+  type: str
+  default: human
+- name: gene_col
+  type: str
+  default: gene
+- name: score_col
+  type: str
+  default: log2fc
+- name: padj_col
+  type: str
+  default: padj
+- name: padj_threshold
+  type: float
+  default: 0.05
+- name: n_permutations
+  type: int
+  default: 1000
+outputs:
+- ora.csv
+- gsea.csv
+references:
+- Subramanian et al. 2005 PNAS

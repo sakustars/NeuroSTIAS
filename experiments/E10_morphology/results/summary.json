@@ -1,0 +1,76 @@
+{
+  "id": "E10",
+  "title": "Neuron morphometrics and cell-class classification",
+  "question": "Do NeuroSTIAS morphometrics agree with NeuroM, and can they separate principal cells from interneurons?",
+  "data_origin": "real",
+  "baseline_status": {},
+  "notes": [
+    "failed H17-06-012-21-04-03_637422705_m_dendriteaxon: Section type changed without a bifucation at line: 1932, consider using UNIFURCATED_SECTION_CHANGE option",
+    "failed 761429710_transformed: All radii must be the same",
+    "failed 824909637_transformed: All radii must be the same",
+    "failed H17-06-012-21-03-06_637409352_m_DendriteAxon: Section type changed without a bifucation at line: 554, consider using UNIFURCATED_SECTION_CHANGE option",
+    "failed Pvalb-IRES-Cre-Ai14-470528201: Section type changed without a bifucation at line: 919, consider using UNIFURCATED_SECTION_CHANGE option",
+    "The classification comparison is not feature-matched: the NeuroSTIAS set has 11 features (adds Sholl peak, path length and axon/dendrite lengths) versus 5 NeuroM features; the accuracy gap reflects feature choice, not a better implementation. Neurons that NeuroM/MorphIO rejects as malformed are excluded from both arms (listed above).",
+    "NeuroM's number_of_leaves counts terminations including the axon; differences in soma handling can make max radial distance differ slightly (NeuroSTIAS measures from the soma centroid)."
+  ],
+  "n_neurons": 395,
+  "class_counts": {
+    "principal": 198,
+    "interneuron": 197
+  },
+  "agreement": [
+    {
+      "metric": "total_length",
+      "n": 395,
+      "pearson_r": 0.9999979617307014,
+      "median_rel_diff": 0.0037007640697497434,
+      "frac_identical": 0.002531645569620253
+    },
+    {
+      "metric": "n_branch_points",
+      "n": 395,
+      "pearson_r": 1.0,
+      "median_rel_diff": 0.0,
+      "frac_identical": 1.0
+    },
+    {
+      "metric": "n_tips",
+      "n": 395,
+      "pearson_r": 1.0,
+      "median_rel_diff": 0.0,
+      "frac_identical": 1.0
+    },
+    {
+      "metric": "n_stems",
+      "n": 395,
+      "pearson_r": 0.999705961829032,
+      "median_rel_diff": 0.0,
+      "frac_identical": 0.9974683544303797
+    },
+    {
+      "metric": "max_radial_distance",
+      "n": 395,
+      "pearson_r": 0.9999890865635565,
+      "median_rel_diff": 4.978824499472222e-07,
+      "frac_identical": 0.5139240506329114
+    }
+  ],
+  "classification": [
+    {
+      "features": "neurostias",
+      "n_features": 11,
+      "balanced_accuracy_mean": 0.8910263157894738,
+      "balanced_accuracy_sd": 0.05226695406788716,
+      "chance": 0.5
+    },
+    {
+      "features": "neurom",
+      "n_features": 5,
+      "balanced_accuracy_mean": 0.8522631578947368,
+      "balanced_accuracy_sd": 0.055979096811027536,
+      "chance": 0.5
+    }
+  ],
+  "n_failed": 5,
+  "runtime_seconds": 47.4
+}

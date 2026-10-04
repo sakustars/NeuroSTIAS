@@ -1,0 +1,44 @@
+name: atlas.annotate
+category: atlas
+description: Annotate brain cell classes (neurons, glia, vascular, immune), neuron subclasses (cortical
+  layer types, interneuron families), neurotransmitter identity and injury states with curated marker
+  panels tested against expression-matched control gene sets. Unsupported calls are left Unresolved.
+entry: neurostias.skills_impl:annotate_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: species
+  type: str
+  default: auto
+  choices:
+  - auto
+  - human
+  - mouse
+- name: alpha
+  type: float
+  default: 0.05
+  description: Family-wise error per observation
+- name: min_genes
+  type: int
+  default: 3
+- name: n_null
+  type: int
+  default: 1000
+- name: section_key
+  type: str
+  description: obs column with section/slice IDs (for per-section plots and 2D graphs)
+- name: save_h5ad
+  type: bool
+  default: true
+  description: Write the updated AnnData to the run folder
+outputs:
+- annotations.csv
+- panel_coverage.csv
+- class_counts.png
+- class_spatial.png
+references:
+- Hodge et al. 2019 Nature
+- Tasic et al. 2018 Nature
+- Tirosh et al. 2016 Science (control gene sets)

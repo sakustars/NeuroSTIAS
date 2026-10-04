@@ -1,0 +1,17 @@
+# Optional LLM assistant plugin configuration (used by `neurostias ask`).
+# Command-line flags (--provider/--model/--endpoint) override these values.
+provider: local            # local | anthropic | openai
+local:
+  endpoint: http://localhost:1234/v1   # LM Studio default; Ollama: http://localhost:11434/v1; llama.cpp: http://localhost:8080/v1
+  model: qwen/qwen3.5-9b               # any model loaded in your local server
+anthropic:
+  model: claude-opus-5-5               # API key from ANTHROPIC_API_KEY (or `ant auth login`)
+  effort: medium
+openai:
+  model: gpt-5                          # API key from OPENAI_API_KEY; base URL optional
+  endpoint: null
+max_steps: 8
+cloud:
+  # Cloud providers receive only skill result summaries (no expression matrices,
+  # no per-cell tables, home directory redacted). Set to true to acknowledge.
+  acknowledged: false

@@ -1,0 +1,20 @@
+name: core.load_triplet
+category: core
+description: Load a 3D-STIAS CSV triplet (expression genes x cells, coordinates with x/y/z, metadata)
+  into AnnData, aligned strictly by cell/spot ID.
+entry: neurostias.skills_impl:load_triplet_skill
+inputs:
+- name: expression
+  type: csv
+  required: true
+  description: Expression matrix CSV/TSV (first column genes)
+- name: coordinates
+  type: csv
+  required: true
+  description: Coordinates CSV with ID and x, y, z columns
+- name: metadata
+  type: csv
+  required: true
+  description: Metadata CSV with an ID column
+outputs:
+- loaded.h5ad

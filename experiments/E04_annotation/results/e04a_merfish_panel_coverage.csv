@@ -1,0 +1,40 @@
+panel,n_panel,n_in_data,n_detected,detected,usable,section,parent
+Excitatory neuron,7,2,2,SLC17A7;SLC17A6,False,classes,
+Inhibitory neuron,6,1,1,GAD1,False,classes,
+Astrocyte,8,2,2,AQP4;ALDH1L1,False,classes,
+Oligodendrocyte,8,2,2,MBP;OPALIN,False,classes,
+OPC,6,1,1,PDGFRA,False,classes,
+Microglia,8,0,0,,False,classes,
+Border macrophage,5,0,0,,False,classes,
+Endothelial,7,0,0,,False,classes,
+Pericyte,5,1,1,RGS5,False,classes,
+Vascular smooth muscle,4,1,1,MYH11,False,classes,
+Fibroblast / VLMC,5,0,0,,False,classes,
+Ependymal,5,0,0,,False,classes,
+Choroid plexus,5,0,0,,False,classes,
+Erythrocyte (blood),4,0,0,,False,classes,
+T / NK cell,5,0,0,,False,classes,
+L2/3 IT,4,0,0,,False,neuron_subclasses,Excitatory neuron
+L4 IT,3,0,0,,False,neuron_subclasses,Excitatory neuron
+L5 ET,3,0,0,,False,neuron_subclasses,Excitatory neuron
+L5/6 NP,3,1,1,SLC17A8,False,neuron_subclasses,Excitatory neuron
+L6 IT/CT,4,0,0,,False,neuron_subclasses,Excitatory neuron
+L6b,3,1,1,CPLX3,False,neuron_subclasses,Excitatory neuron
+PVALB interneuron,3,1,1,TAC1,False,neuron_subclasses,Inhibitory neuron
+SST interneuron,3,1,1,SST,False,neuron_subclasses,Inhibitory neuron
+VIP interneuron,3,0,0,,False,neuron_subclasses,Inhibitory neuron
+LAMP5 interneuron,3,1,1,NDNF,False,neuron_subclasses,Inhibitory neuron
+SNCG interneuron,3,0,0,,False,neuron_subclasses,Inhibitory neuron
+Glutamatergic,3,3,3,SLC17A7;SLC17A6;SLC17A8,True,neurotransmitter,
+GABAergic,3,1,1,GAD1,False,neurotransmitter,
+Glycinergic,2,0,0,,False,neurotransmitter,
+Cholinergic,3,1,1,CHAT,False,neurotransmitter,
+Dopaminergic,4,2,2,TH;SLC18A2,False,neurotransmitter,
+Noradrenergic,4,2,2,TH;SLC18A2,False,neurotransmitter,
+Serotonergic,4,0,0,,False,neurotransmitter,
+Histaminergic,2,1,1,SLC18A2,False,neurotransmitter,
+Reactive astrocyte,6,0,0,,False,states,
+Disease-associated microglia,7,0,0,,False,states,
+Interferon response,6,0,0,,False,states,
+Immediate early genes,6,1,0,,False,states,
+Hemorrhage / iron handling,6,0,0,,False,states,

@@ -1,0 +1,30 @@
+name: legacy.grn
+category: legacy
+description: Exploratory TF-target co-expression network (Spearman, complete-family BH-FDR, optional cell-type
+  stratification) with a neural TF list by default; co-expression, not causal regulation.
+entry: neurostias.skills_impl:grn_skill
+inputs:
+- name: input
+  type: h5ad
+  required: true
+  description: Input AnnData (.h5ad)
+- name: tf_set
+  type: str
+  default: neural
+  choices:
+  - neural
+  - generic_v441
+- name: n_tfs
+  type: int
+  default: 20
+- name: n_targets
+  type: int
+  default: 50
+- name: corr_threshold
+  type: float
+  default: 0.2
+- name: context_key
+  type: str
+outputs:
+- grn_edges.csv
+- grn_tests.csv

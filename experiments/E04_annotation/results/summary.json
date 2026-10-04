@@ -1,0 +1,144 @@
+{
+  "id": "E04",
+  "title": "Brain cell-type annotation",
+  "question": "Do curated brain panels with a statistical test annotate brain cell classes and cortical layers more accurately than the generic V4.4.1 panels, plain argmax, and an established reference classifier (CellTypist)?",
+  "data_origin": "real",
+  "baseline_status": {
+    "celltypist": {
+      "status": "ran",
+      "detail": "x, expect ALL genes and log1p normalized expression to 10000 counts per cell. The prediction result may not be accurate\n\ud83d\udd2c Input data has 64373 cells and 161 genes\n\ud83d\udd17 Matching reference genes in the model\n\ud83e\uddec 139 features used for prediction\n\u2696\ufe0f Scaling input data\n\ud83d\udd8b\ufe0f Predicting labels\n\u2705 Prediction done!\n"
+    }
+  },
+  "notes": [
+    "MERFISH measures a 161-gene targeted panel, so several markers are absent; panel coverage is reported in e04a_merfish_panel_coverage.csv. CellTypist models are built on whole transcriptomes and are evaluated on the overlapping genes only.",
+    "NeuroSTIAS requires >= 3 detected genes per panel by default and abstains (Unresolved) otherwise; on the 161-gene MERFISH panel no class panel reaches 3 genes, so the default abstains everywhere by design. neurostias_min_genes2 is a pre-defined sensitivity setting; the argmax arms use >= 2 genes.",
+    "Oligodendrocyte maturation stages are merged into one lineage class because the author labels do not separate OPCs from immature oligodendrocytes.",
+    "Layer panels are canonical literature markers chosen before running and not derived from DLPFC."
+  ],
+  "v441_label_distribution_merfish": {
+    "Neuron (unspecified)": 38440,
+    "Astrocyte": 25933
+  },
+  "celltypist_raw_labels_top": {
+    "106 PVpo-VMPO-MPN Hmx2 Gaba": 11920,
+    "327 Oligo NN": 6685,
+    "196 PAG-PPN Pax5 Sox21 Gaba": 3264,
+    "068 LSX Otx2 Gaba": 2518,
+    "023 SUB-ProS Glut": 2156,
+    "073 MEA-BST Sox6 Gaba": 2155,
+    "128 VMH Fezf1 Glut": 1935,
+    "136 PMv-TMv Pitx2 Glut": 1904,
+    "175 SC Bnc2 Glut": 1535,
+    "326 OPC NN": 1526,
+    "199 PAG-MRN-RN Foxa2 Gaba": 1427,
+    "117 LHA Barhl2 Glut": 1329,
+    "181 IC Tfap2d Maf Glut": 1264,
+    "062 STR D2 Gaba": 1161,
+    "320 Astro-OLF NN": 1075,
+    "090 BST-MPN Six3 Nrgn Gaba": 1043,
+    "088 BST Tac2 Gaba": 929,
+    "134 PH-ant-LHA Otp Bsx Glut": 919,
+    "222 PB Evx2 Glut": 904,
+    "285 MY Lhx1 Gly-Gaba": 867,
+    "049 Lamp5 Gaba": 794,
+    "286 PPY-PGRNl Vip Glyc-Gaba": 761,
+    "131 LHA-AHN-PVH Otp Trh Glut": 702,
+    "040 OB Trdn Gaba": 675,
+    "071 LSX Prdm12 Zeb2 Gaba": 672
+  },
+  "celltypist_log": "x, expect ALL genes and log1p normalized expression to 10000 counts per cell. The prediction result may not be accurate\n\ud83d\udd2c Input data has 64373 cells and 161 genes\n\ud83d\udd17 Matching reference genes in the model\n\ud83e\uddec 139 features used for prediction\n\u2696\ufe0f Scaling input data\n\ud83d\udd8b\ufe0f Predicting labels\n\u2705 Prediction done!\n",
+  "part_a": [
+    {
+      "method": "neurostias",
+      "coverage": 0.0,
+      "accuracy_resolved": NaN,
+      "accuracy_overall": 0.0,
+      "macro_f1": 0.0,
+      "recall_Astrocyte": 0.0,
+      "recall_Endothelial": 0.0,
+      "recall_Ependymal": 0.0,
+      "recall_Excitatory neuron": 0.0,
+      "recall_Inhibitory neuron": 0.0,
+      "recall_Microglia": 0.0,
+      "recall_Oligodendrocyte lineage": 0.0,
+      "recall_Pericyte": 0.0
+    },
+    {
+      "method": "neurostias_min_genes2",
+      "coverage": 0.28003976822580895,
+      "accuracy_resolved": 0.853053752704277,
+      "accuracy_overall": 0.23888897519146227,
+      "macro_f1": 0.23612357487172883,
+      "recall_Astrocyte": 0.8078160371738353,
+      "recall_Endothelial": 0.0,
+      "recall_Ependymal": 0.0,
+      "recall_Excitatory neuron": 0.20056136769584076,
+      "recall_Inhibitory neuron": 0.0,
+      "recall_Microglia": 0.0,
+      "recall_Oligodendrocyte lineage": 0.6471686372121966,
+      "recall_Pericyte": 0.0
+    },
+    {
+      "method": "neurostias_argmax",
+      "coverage": 1.0,
+      "accuracy_resolved": 0.409690398148292,
+      "accuracy_overall": 0.409690398148292,
+      "macro_f1": 0.21018874243844599,
+      "recall_Astrocyte": 0.9715238889550816,
+      "recall_Endothelial": 0.0,
+      "recall_Ependymal": 0.0,
+      "recall_Excitatory neuron": 0.8992940375946245,
+      "recall_Inhibitory neuron": 0.0,
+      "recall_Microglia": 0.0,
+      "recall_Oligodendrocyte lineage": 0.7929890064302012,
+      "recall_Pericyte": 0.0
+    },
+    {
+      "method": "v441_generic",
+      "coverage": 1.0,
+      "accuracy_resolved": 0.12800397682258088,
+      "accuracy_overall": 0.12800397682258088,
+      "macro_f1": 0.060012818271863895,
+      "recall_Astrocyte": 0.9817705230549267,
+      "recall_Endothelial": 0.0,
+      "recall_Ependymal": 0.0,
+      "recall_Excitatory neuron": 0.0,
+      "recall_Inhibitory neuron": 0.0,
+      "recall_Microglia": 0.0,
+      "recall_Oligodendrocyte lineage": 0.0,
+      "recall_Pericyte": 0.0
+    },
+    {
+      "method": "celltypist_Mouse_Whole_Brain",
+      "coverage": 1.0,
+      "accuracy_resolved": 0.5404439749584453,
+      "accuracy_overall": 0.5404439749584453,
+      "macro_f1": 0.26428776139532806,
+      "recall_Astrocyte": 0.10508757297748124,
+      "recall_Endothelial": 0.0,
+      "recall_Ependymal": 0.0,
+      "recall_Excitatory neuron": 0.635791443395424,
+      "recall_Inhibitory neuron": 0.7765841444206615,
+      "recall_Microglia": 0.0,
+      "recall_Oligodendrocyte lineage": 0.7471478946276706,
+      "recall_Pericyte": 0.0
+    }
+  ],
+  "part_b": [
+    {
+      "method": "layer_panel_argmax",
+      "coverage": 1.0,
+      "accuracy_resolved": 0.2873457537074373,
+      "accuracy_overall": 0.2873457537074373,
+      "chance_majority_layer": 0.4289934810616361
+    },
+    {
+      "method": "neurostias_layer_test",
+      "coverage": 0.2165343800094106,
+      "accuracy_resolved": 0.5053036910854986,
+      "accuracy_overall": 0.11379814501432234,
+      "chance_majority_layer": 0.4289934810616361
+    }
+  ],
+  "runtime_seconds": 33.7
+}

@@ -1,0 +1,83 @@
+{
+  "id": "E06",
+  "title": "Neurotransmitter-aware spatial communication",
+  "question": "Does a neurotransmitter/neuropeptide-aware, replicate-consistent spatial method recover canonical neural interactions and replicate across donors better than a generic database and a non-spatial consensus method?",
+  "data_origin": "real",
+  "baseline_status": {
+    "liana": {
+      "status": "ran",
+      "detail": ""
+    }
+  },
+  "notes": [
+    "The canonical list was fixed in run.py before any results were inspected; it is small and textbook-level, so recall is a sanity check rather than a comprehensive benchmark.",
+    "LIANA is non-spatial (cluster-level) and uses its own consensus resource; its significance threshold here (magnitude_rank < 0.05) follows the LIANA documentation's suggested cut-off.",
+    "DLPFC classes come from NeuroSTIAS annotation of Visium spots (mixtures), so receiver/sender classes are dominant-class approximations."
+  ],
+  "canonical_recall": [
+    {
+      "dataset": "DLPFC",
+      "method": "liana",
+      "n_recovered": 0,
+      "n_canonical": 9,
+      "n_not_in_db": 3
+    },
+    {
+      "dataset": "DLPFC",
+      "method": "neurostias_generic_v441",
+      "n_recovered": 1,
+      "n_canonical": 9,
+      "n_not_in_db": 6
+    },
+    {
+      "dataset": "DLPFC",
+      "method": "neurostias_neuro",
+      "n_recovered": 4,
+      "n_canonical": 9,
+      "n_not_in_db": 0
+    },
+    {
+      "dataset": "MERFISH",
+      "method": "liana",
+      "n_recovered": 0,
+      "n_canonical": 9,
+      "n_not_in_db": 3
+    },
+    {
+      "dataset": "MERFISH",
+      "method": "neurostias_generic_v441",
+      "n_recovered": 0,
+      "n_canonical": 9,
+      "n_not_in_db": 6
+    },
+    {
+      "dataset": "MERFISH",
+      "method": "neurostias_neuro",
+      "n_recovered": 0,
+      "n_canonical": 9,
+      "n_not_in_db": 0
+    }
+  ],
+  "replication": [
+    {
+      "method": "liana",
+      "mean_replication_rate": 0.5497346331723795,
+      "mean_n_discoveries": 2370.0
+    },
+    {
+      "method": "neurostias_pooled",
+      "mean_replication_rate": 0.18247053992430717,
+      "mean_n_discoveries": 225.0
+    },
+    {
+      "method": "neurostias_replicate_filtered",
+      "mean_replication_rate": 0.4651960784313725,
+      "mean_n_discoveries": 45.333333333333336
+    }
+  ],
+  "merfish_n_significant": {
+    "neurostias_neuro_n_significant": 87,
+    "neurostias_generic_v441_n_significant": 0
+  },
+  "runtime_seconds": 867.1
+}

@@ -1,0 +1,137 @@
+{
+  "id": "E11",
+  "title": "Functional connectome: group classification and graph metrics",
+  "question": "Does the NeuroSTIAS connectome module reproduce reference child-vs-adult classification accuracy, and which graph metrics differ between groups?",
+  "data_origin": "real",
+  "baseline_status": {},
+  "notes": [
+    "Groups are imbalanced (122 children, 33 adults); balanced accuracy is the primary metric and 'chance' is the majority-class rate for plain accuracy (balanced-accuracy chance = 0.5).",
+    "Children move more than adults (mean framewise displacement 0.37 vs 0.19 mm), so a motion-only baseline and an in-fold motion-regressed connectome are reported, and graph-metric group effects are also given adjusted for mean FD (OLS).",
+    "Mean degree is not tested: proportional thresholding at density 0.15 gives every subject the same edge count.",
+    "Connectivity estimators (including the tangent-space reference) are fitted inside each training fold to avoid leakage from test subjects."
+  ],
+  "classification": [
+    {
+      "features": "mean FD only (motion baseline)",
+      "accuracy_mean": 0.6264516129032258,
+      "accuracy_sd": 0.07771181319792947,
+      "balanced_accuracy_mean": 0.6926571428571429,
+      "balanced_accuracy_sd": 0.07970239229702257,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    },
+    {
+      "features": "correlation",
+      "accuracy_mean": 0.8864516129032257,
+      "accuracy_sd": 0.0443428136191989,
+      "balanced_accuracy_mean": 0.8918095238095236,
+      "balanced_accuracy_sd": 0.053392346177944694,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    },
+    {
+      "features": "correlation (mean FD regressed out in-fold)",
+      "accuracy_mean": 0.8316129032258065,
+      "accuracy_sd": 0.06330804394956523,
+      "balanced_accuracy_mean": 0.7770857142857143,
+      "balanced_accuracy_sd": 0.09927643339059562,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    },
+    {
+      "features": "partial correlation",
+      "accuracy_mean": 0.8793548387096775,
+      "accuracy_sd": 0.06315005336794743,
+      "balanced_accuracy_mean": 0.9063547619047622,
+      "balanced_accuracy_sd": 0.05359833128727092,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    },
+    {
+      "features": "partial correlation (mean FD regressed out in-fold)",
+      "accuracy_mean": 0.8825806451612902,
+      "accuracy_sd": 0.05111045760087318,
+      "balanced_accuracy_mean": 0.8473833333333333,
+      "balanced_accuracy_sd": 0.08454011744087006,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    },
+    {
+      "features": "tangent",
+      "accuracy_mean": 0.9083870967741933,
+      "accuracy_sd": 0.04756724797720454,
+      "balanced_accuracy_mean": 0.9291904761904763,
+      "balanced_accuracy_sd": 0.039286709944092946,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    },
+    {
+      "features": "tangent (mean FD regressed out in-fold)",
+      "accuracy_mean": 0.869032258064516,
+      "accuracy_sd": 0.05527718442165672,
+      "balanced_accuracy_mean": 0.8350166666666667,
+      "balanced_accuracy_sd": 0.08219620769206398,
+      "chance": 0.7870967741935484,
+      "n_subjects": 155
+    }
+  ],
+  "graph_tests": [
+    {
+      "metric": "clustering",
+      "adult_mean": 0.3088658622319088,
+      "child_mean": 0.2849268360282805,
+      "t": 2.7919994634637693,
+      "pval": 0.00727373005951885,
+      "adult_effect_adj_fd": 0.027749630788724926,
+      "t_adj_fd": 3.023989213393221,
+      "pval_adj_fd": 0.002929322863459837,
+      "padj": 0.0145474601190377,
+      "padj_adj_fd": 0.005858645726919674
+    },
+    {
+      "metric": "global_efficiency",
+      "adult_mean": 0.42111609962487206,
+      "child_mean": 0.4175948927243155,
+      "t": 0.4408637441611325,
+      "pval": 0.6605961992449118,
+      "adult_effect_adj_fd": 0.0027507968307656974,
+      "t_adj_fd": 0.2651776681089704,
+      "pval_adj_fd": 0.7912318813450856,
+      "padj": 0.6605961992449118,
+      "padj_adj_fd": 0.7912318813450856
+    },
+    {
+      "metric": "modularity",
+      "adult_mean": 0.45736975511984457,
+      "child_mean": 0.38958595707879695,
+      "t": 4.222541700255144,
+      "pval": 9.303084069605952e-05,
+      "adult_effect_adj_fd": 0.060258664093925,
+      "t_adj_fd": 3.455197874415934,
+      "pval_adj_fd": 0.0007129257212715155,
+      "padj": 0.00037212336278423806,
+      "padj_adj_fd": 0.002851702885086062
+    },
+    {
+      "metric": "n_modules",
+      "adult_mean": 6.606060606060606,
+      "child_mean": 6.967213114754099,
+      "t": -0.8843759118843467,
+      "pval": 0.3794815492448891,
+      "adult_effect_adj_fd": -0.32747282653676035,
+      "t_adj_fd": -0.6298399425723309,
+      "pval_adj_fd": 0.5297449419407512,
+      "padj": 0.5059753989931854,
+      "padj_adj_fd": 0.7063265892543349
+    }
+  ],
+  "group_counts": {
+    "child": 122,
+    "adult": 33
+  },
+  "mean_fd_by_group": {
+    "adult": 0.18707905403161487,
+    "child": 0.3706681952100493
+  },
+  "runtime_seconds": 27.9
+}

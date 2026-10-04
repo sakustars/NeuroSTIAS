@@ -1,0 +1,3 @@
+score,spearman_vs_age,ci_low,ci_high,pval,n_samples,expected_sign,analysis
+neurostias_neuron_fraction,0.319091689111672,0.0014118250562238982,0.6066395406349389,0.01868211512510025,54,+,post hoc
+atlas_neuron_fraction,0.44846249669296756,0.1630889646012611,0.6843678933673387,0.0006714716518690892,54,+,reference (atlas labels)

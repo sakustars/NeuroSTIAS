@@ -1,0 +1,19 @@
+name: ephys.eeg_bandpower
+category: ephys
+description: Absolute and relative EEG/LFP band power (delta, theta, alpha, beta, gamma) per channel from
+  any MNE-readable recording (EDF, FIF, BrainVision, ...).
+entry: neurostias.skills_impl:eeg_bandpower_skill
+requires:
+- mne
+inputs:
+- name: input
+  type: path
+  required: true
+- name: picks
+  type: str
+  default: eeg
+outputs:
+- band_power.csv
+- band_power.png
+references:
+- Gramfort et al. 2013 Front Neurosci (MNE)

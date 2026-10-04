@@ -1,0 +1,157 @@
+{
+  "id": "E07",
+  "title": "Brain-organoid maturation and regional identity",
+  "question": "Do NeuroSTIAS neurodevelopmental and regional panels track organoid age and recover atlas-level cell states and regions better than V4.4.1 stemness and simple alternatives?",
+  "data_origin": "real",
+  "baseline_status": {},
+  "notes": [
+    "Sample-level statistics (one value per bio_sample) are primary; cell-level correlations would treat cells of one organoid as independent.",
+    "Post-hoc analysis: after Part A showed no age trend for the pre-specified maturation index, sample neuron fractions were added. The NeuroSTIAS neuron fraction is post hoc and should be read as exploratory; the atlas neuron fraction uses HNOCA's own labels and is a reference ceiling.",
+    "Selection check: the subset takes the first <=600 cells of each bio_sample in atlas order; class composition is compared with the full sample (total-variation distance) and the age-neuron fraction trend is recomputed on the full samples.",
+    "Paulsen et al. 2022 organoids include several cell lines and autism-gene mutants alongside controls, so age trends are pooled over genotypes.",
+    "HNOCA annotations come from reference mapping by the atlas authors; agreement measures consistency with the atlas, not absolute truth."
+  ],
+  "selection": "{\"source\": \"https://datasets.cellxgene.cziscience.com/127a3c9a-7bcb-4362-a73e-e60fd67f5bae.h5ad\", \"publication\": \"Paulsen, 2022\", \"per_sample\": 600, \"rows\": \"first contiguous run per bio_sample\", \"n_cells\": 32400, \"citation\": \"He et al. 2024 Nature 635 (HNOCA)\", \"assembly\": \"X/obs from first extraction (write stopped at var); verified: selection identical, per-row nnz identical for all cells, exact data/indices for randomly sampled runs; var fetched separately\", \"verified_runs\": [[882488, 882538], [989271, 989321], [955152, 955202], [892659, 892709], [826890, 826940], [1035643, 1035693]]}",
+  "annot_level_2_values": {
+    "Dorsal Telencephalic Neuron": 15353,
+    "Dorsal Telencephalic NPC": 8614,
+    "Astrocyte": 1995,
+    "CP": 1849,
+    "Glioblast": 1467,
+    "Non-telencephalic Neuron": 1052,
+    "Dorsal Telencephalic IP": 663,
+    "Non-telencephalic NPC": 613,
+    "Ventral Telencephalic Neuron": 431,
+    "Ventral Telencephalic NPC": 293,
+    "OPC": 38,
+    "NC Derivatives": 24,
+    "MC": 7,
+    "EC": 1
+  },
+  "annot_region_values": {
+    "Dorsal telencephalon": 24630,
+    "Unspecific": 5381,
+    "Ventral telencephalon": 724,
+    "Thalamus": 688,
+    "Medulla": 419,
+    "Pons": 251,
+    "Cerebellum": 105,
+    "Dorsal midbrain": 102,
+    "Hypothalamus": 80,
+    "Ventral midbrain": 20
+  },
+  "part_a": [
+    {
+      "score": "maturation",
+      "spearman_vs_age": 0.028921218792635383,
+      "ci_low": -0.2958753278189657,
+      "ci_high": 0.36343431705387297,
+      "pval": 0.8355435135061002,
+      "n_samples": 54,
+      "expected_sign": "+"
+    },
+    {
+      "score": "stemness_v441",
+      "spearman_vs_age": -0.17918694840468188,
+      "ci_low": -0.5240952281469258,
+      "ci_high": 0.1447215558953445,
+      "pval": 0.19481657513736303,
+      "n_samples": 54,
+      "expected_sign": "-"
+    },
+    {
+      "score": "genes_detected",
+      "spearman_vs_age": -0.09529023084266718,
+      "ci_low": -0.42561918910482655,
+      "ci_high": 0.21717090656856286,
+      "pval": 0.4930822340222609,
+      "n_samples": 54,
+      "expected_sign": "-"
+    }
+  ],
+  "part_b": [
+    {
+      "method": "neurostias_test",
+      "coverage": 0.5625,
+      "accuracy_resolved": 0.7408598308919853,
+      "accuracy_overall": 0.4167336548767417,
+      "macro_f1": 0.31394933343064707,
+      "n_cells": 29856
+    },
+    {
+      "method": "argmax",
+      "coverage": 1.0,
+      "accuracy_resolved": 0.7578711146838156,
+      "accuracy_overall": 0.7578711146838156,
+      "macro_f1": 0.45155809268307534,
+      "n_cells": 29856
+    }
+  ],
+  "part_c": [
+    {
+      "method": "neurostias_test",
+      "coverage": 0.06144445709514593,
+      "accuracy_resolved": 0.4076590487955528,
+      "accuracy_overall": 0.025048388933166344,
+      "macro_f1": 0.19591841891807818,
+      "n_cells": 26349
+    },
+    {
+      "method": "argmax",
+      "coverage": 1.0,
+      "accuracy_resolved": 0.3751945045352765,
+      "accuracy_overall": 0.3751945045352765,
+      "macro_f1": 0.2651072090909366,
+      "n_cells": 26349
+    }
+  ],
+  "n_cells": 32400,
+  "n_samples": 54,
+  "ages": [
+    28,
+    32,
+    35,
+    36,
+    38,
+    90,
+    92,
+    98,
+    105,
+    107,
+    108,
+    178,
+    190
+  ],
+  "part_a_posthoc": [
+    {
+      "score": "neurostias_neuron_fraction",
+      "spearman_vs_age": 0.319091689111672,
+      "ci_low": 0.0014118250562238982,
+      "ci_high": 0.6066395406349389,
+      "pval": 0.01868211512510025,
+      "n_samples": 54,
+      "expected_sign": "+",
+      "analysis": "post hoc"
+    },
+    {
+      "score": "atlas_neuron_fraction",
+      "spearman_vs_age": 0.44846249669296756,
+      "ci_low": 0.1630889646012611,
+      "ci_high": 0.6843678933673387,
+      "pval": 0.0006714716518690892,
+      "n_samples": 54,
+      "expected_sign": "+",
+      "analysis": "reference (atlas labels)"
+    }
+  ],
+  "selection_check": [
+    {
+      "tv_distance_median": 0.015645798214837178,
+      "tv_distance_max": 0.17033158813263527,
+      "n_samples": 54,
+      "spearman_age_neuron_fraction_full": 0.39429645700557076,
+      "spearman_age_neuron_fraction_subset": 0.44846249669296756
+    }
+  ],
+  "runtime_seconds": 30.0
+}

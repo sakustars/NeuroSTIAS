@@ -1,0 +1,23 @@
+name: ephys.spikes
+category: ephys
+description: 'Spike-train statistics and quality control for all units in an NWB file: firing rate, ISI
+  CV, local variation, burst fraction, Fano factor, refractory-period violations.'
+entry: neurostias.skills_impl:spikes_skill
+requires:
+- pynwb
+inputs:
+- name: input
+  type: nwb
+  required: true
+  description: NWB file with a units table
+- name: max_units
+  type: int
+- name: refractory_ms
+  type: float
+  default: 1.5
+outputs:
+- unit_metrics.csv
+- unit_metrics.png
+references:
+- Shinomoto et al. 2003 Neural Comput (LV)
+- Denker et al. Elephant

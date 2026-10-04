@@ -1,0 +1,197 @@
+{
+  "id": "E09",
+  "title": "Neuron and network simulator correctness",
+  "question": "Do the NeuroSTIAS Hodgkin-Huxley, LIF and Brunel network simulators agree with Brian2 and with closed-form results?",
+  "data_origin": "synthetic",
+  "baseline_status": {
+    "brian2": {
+      "status": "ran",
+      "detail": ""
+    }
+  },
+  "notes": [
+    "Simulations are synthetic by nature; this experiment validates numerical correctness, not biology.",
+    "Brian2 2.7.1 runs in an isolated environment with NumPy < 2 (Brian2 2.9 is incompatible with NumPy 2.4)."
+  ],
+  "dt_convergence": [
+    {
+      "dt_ms": 0.025,
+      "brian2": 4.362222222222222,
+      "neurostias": 4.473888888888889,
+      "relative_difference": 0.02559857361181878
+    },
+    {
+      "dt_ms": 0.05,
+      "brian2": 3.9568518518518516,
+      "neurostias": 4.465925925925926,
+      "relative_difference": 0.12865633921467684
+    },
+    {
+      "dt_ms": 0.1,
+      "brian2": 3.5274074074074075,
+      "neurostias": 4.431851851851852,
+      "relative_difference": 0.256404871902562
+    }
+  ],
+  "hh_trace": {
+    "rmse_mV": 0.00018359964710148644,
+    "n_spikes_ours": 7,
+    "n_spikes_brian2": 7,
+    "max_spike_time_diff_ms": 0.00899603909121538,
+    "seconds_ours": 0.258678674697876,
+    "seconds_brian2": 1.7419400215148926
+  },
+  "hh_fi": [
+    {
+      "current_uA_cm2": 2.0,
+      "rate_ours_hz": 0.0,
+      "rate_brian2_hz": 0.0
+    },
+    {
+      "current_uA_cm2": 4.0,
+      "rate_ours_hz": 0.0,
+      "rate_brian2_hz": 0.0
+    },
+    {
+      "current_uA_cm2": 6.0,
+      "rate_ours_hz": 0.0,
+      "rate_brian2_hz": 0.0
+    },
+    {
+      "current_uA_cm2": 6.5,
+      "rate_ours_hz": 55.0,
+      "rate_brian2_hz": 55.0
+    },
+    {
+      "current_uA_cm2": 7.0,
+      "rate_ours_hz": 60.0,
+      "rate_brian2_hz": 60.0
+    },
+    {
+      "current_uA_cm2": 8.0,
+      "rate_ours_hz": 62.5,
+      "rate_brian2_hz": 62.5
+    },
+    {
+      "current_uA_cm2": 10.0,
+      "rate_ours_hz": 70.0,
+      "rate_brian2_hz": 70.0
+    },
+    {
+      "current_uA_cm2": 15.0,
+      "rate_ours_hz": 80.0,
+      "rate_brian2_hz": 80.0
+    },
+    {
+      "current_uA_cm2": 20.0,
+      "rate_ours_hz": 87.5,
+      "rate_brian2_hz": 87.5
+    },
+    {
+      "current_uA_cm2": 30.0,
+      "rate_ours_hz": 100.0,
+      "rate_brian2_hz": 100.0
+    }
+  ],
+  "lif": [
+    {
+      "current_nA": 1.9,
+      "rate_ours_hz": 0.0,
+      "rate_analytic_hz": 0.0,
+      "rate_brian2_hz": 0.0
+    },
+    {
+      "current_nA": 2.1,
+      "rate_ours_hz": 15.5,
+      "rate_analytic_hz": 15.900665678251318,
+      "rate_brian2_hz": 15.5
+    },
+    {
+      "current_nA": 2.5,
+      "rate_ours_hz": 29.0,
+      "rate_analytic_hz": 29.249380533981533,
+      "rate_brian2_hz": 29.0
+    },
+    {
+      "current_nA": 3.0,
+      "rate_ours_hz": 41.5,
+      "rate_analytic_hz": 41.71490687414833,
+      "rate_brian2_hz": 41.5
+    },
+    {
+      "current_nA": 4.0,
+      "rate_ours_hz": 63.0,
+      "rate_analytic_hz": 63.040002190641395,
+      "rate_brian2_hz": 63.0
+    },
+    {
+      "current_nA": 6.0,
+      "rate_ours_hz": 99.0,
+      "rate_analytic_hz": 98.9187961700029,
+      "rate_brian2_hz": 99.0
+    }
+  ],
+  "brunel": [
+    {
+      "g": 4.5,
+      "eta": 0.9,
+      "simulator": "brian2",
+      "rate_E_mean": 3.659777777777778,
+      "rate_E_sd": 0.2907670252331974,
+      "cv_E_mean": 0.47173937590163095,
+      "synchrony_mean": 0.005973367053487225,
+      "seconds_median": 1.0568530559539795
+    },
+    {
+      "g": 4.5,
+      "eta": 0.9,
+      "simulator": "neurostias",
+      "rate_E_mean": 4.432,
+      "rate_E_sd": 0.1614348280381396,
+      "cv_E_mean": 0.4614888928664829,
+      "synchrony_mean": 0.007066789221364169,
+      "seconds_median": 0.7264881134033203
+    },
+    {
+      "g": 5.0,
+      "eta": 2.0,
+      "simulator": "brian2",
+      "rate_E_mean": 74.60955555555554,
+      "rate_E_sd": 0.2205224576341057,
+      "cv_E_mean": 0.15787328791193228,
+      "synchrony_mean": 0.012856712234599416,
+      "seconds_median": 1.7198200225830078
+    },
+    {
+      "g": 5.0,
+      "eta": 2.0,
+      "simulator": "neurostias",
+      "rate_E_mean": 75.41322222222223,
+      "rate_E_sd": 0.07134337070261307,
+      "cv_E_mean": 0.15868194955675707,
+      "synchrony_mean": 0.012370753745640495,
+      "seconds_median": 1.3398699760437012
+    },
+    {
+      "g": 6.0,
+      "eta": 4.0,
+      "simulator": "brian2",
+      "rate_E_mean": 138.44699999999997,
+      "rate_E_sd": 0.26960035580810415,
+      "cv_E_mean": 0.14852392312413162,
+      "synchrony_mean": 0.022809552134350496,
+      "seconds_median": 2.0470306873321533
+    },
+    {
+      "g": 6.0,
+      "eta": 4.0,
+      "simulator": "neurostias",
+      "rate_E_mean": 138.93644444444445,
+      "rate_E_sd": 0.06864270527633841,
+      "cv_E_mean": 0.14875978703258042,
+      "synchrony_mean": 0.020436060283074754,
+      "seconds_median": 1.7941439151763916
+    }
+  ],
+  "runtime_seconds": 123.6
+}

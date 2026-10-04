@@ -1,0 +1,49 @@
+  error: subprocess-exited-with-error
+  
+  × Building wheel for louvain (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [35 lines of output]
+      /private/var/folders/69/bj0h7v5n7zdb5t47jnrsdl4h0000gn/T/pip-build-env-5m9cspz3/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:318: UserWarning: Unknown distribution option: 'test_suite'
+        warnings.warn(msg)
+      /private/var/folders/69/bj0h7v5n7zdb5t47jnrsdl4h0000gn/T/pip-build-env-5m9cspz3/overlay/lib/python3.11/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.macosx-26.0-arm64-cpython-311/louvain
+      copying src/louvain/functions.py -> build/lib.macosx-26.0-arm64-cpython-311/louvain
+      copying src/louvain/Optimiser.py -> build/lib.macosx-26.0-arm64-cpython-311/louvain
+      copying src/louvain/VertexPartition.py -> build/lib.macosx-26.0-arm64-cpython-311/louvain
+      copying src/louvain/version.py -> build/lib.macosx-26.0-arm64-cpython-311/louvain
+      copying src/louvain/__init__.py -> build/lib.macosx-26.0-arm64-cpython-311/louvain
+      warning: build_py: byte-compiling is disabled, skipping.
+      
+      running build_ext
+      running build_c_core
+      We are going to build the C core of igraph.
+        Source folder: vendor/source/igraph
+        Build folder: vendor/build/igraph
+        Install folder: vendor/install/igraph
+      
+      igraph uses CMake as the build system. You need to install CMake before compiling igraph.
+      error: [Errno 2] No such file or directory: '/private/var/folders/69/bj0h7v5n7zdb5t47jnrsdl4h0000gn/T/pip-install-wbpn17ky/louvain_18cc7cb58923401681a4f37f3c77283b/vendor/install/igraph/build.cfg'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for louvain
+error: failed-wheel-build-for-install
+
+× Failed to build installable wheels for some pyproject.toml based projects
+╰─> louvain
+DONE

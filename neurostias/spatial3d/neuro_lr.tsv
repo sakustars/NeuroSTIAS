@@ -1,0 +1,65 @@
+interaction	category	ligand	ligand_genes	receptor	receptor_genes	note
+GLU_AMPA	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	AMPA receptor	GRIA1|GRIA2|GRIA3|GRIA4	ligand = vesicular glutamate transporter (any VGLUT)
+GLU_NMDA_2A	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	NMDA receptor (GluN1/2A)	GRIN1;GRIN2A	obligatory GluN1 subunit + GluN2A
+GLU_NMDA_2B	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	NMDA receptor (GluN1/2B)	GRIN1;GRIN2B
+GLU_KAINATE	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	Kainate receptor	GRIK1|GRIK2|GRIK3|GRIK4|GRIK5
+GLU_MGLUR_I	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	Group I mGluR	GRM1|GRM5
+GLU_MGLUR_II	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	Group II mGluR	GRM2|GRM3	GRM3 is also astrocytic
+GLU_MGLUR_III	neurotransmitter	Glutamate	SLC17A7|SLC17A6|SLC17A8	Group III mGluR	GRM4|GRM7|GRM8
+GABA_A	neurotransmitter	GABA	GAD1|GAD2;SLC32A1	GABA-A receptor	GABRA1|GABRA2|GABRA3|GABRA4|GABRA5;GABRB1|GABRB2|GABRB3;GABRG2	ligand = synthesis (GAD1/2) + vesicular transporter (VGAT); receptor = alpha + beta + gamma2
+GABA_B	neurotransmitter	GABA	GAD1|GAD2;SLC32A1	GABA-B receptor	GABBR1;GABBR2	heterodimer
+GLY_R	neurotransmitter	Glycine	SLC6A5;SLC32A1	Glycine receptor	GLRA1|GLRA2|GLRA3;GLRB
+ACH_NIC_A4B2	neurotransmitter	Acetylcholine	CHAT;SLC18A3	Nicotinic a4b2	CHRNA4;CHRNB2
+ACH_NIC_A7	neurotransmitter	Acetylcholine	CHAT;SLC18A3	Nicotinic a7	CHRNA7
+ACH_MUSC	neurotransmitter	Acetylcholine	CHAT;SLC18A3	Muscarinic receptor	CHRM1|CHRM2|CHRM3|CHRM4|CHRM5
+DA_D1	neurotransmitter	Dopamine	TH;DDC;SLC18A2	D1-like receptor	DRD1|DRD5
+DA_D2	neurotransmitter	Dopamine	TH;DDC;SLC18A2	D2-like receptor	DRD2|DRD3|DRD4
+5HT_1	neurotransmitter	Serotonin	TPH2;DDC;SLC18A2	5-HT1 receptor	HTR1A|HTR1B|HTR1D|HTR1F
+5HT_2	neurotransmitter	Serotonin	TPH2;DDC;SLC18A2	5-HT2 receptor	HTR2A|HTR2C
+5HT_3	neurotransmitter	Serotonin	TPH2;DDC;SLC18A2	5-HT3 receptor	HTR3A
+5HT_OTHER	neurotransmitter	Serotonin	TPH2;DDC;SLC18A2	5-HT4/6/7 receptor	HTR4|HTR6|HTR7
+NE_A1	neurotransmitter	Noradrenaline	TH;DBH;SLC18A2	Alpha-1 adrenergic	ADRA1A|ADRA1B|ADRA1D
+NE_A2	neurotransmitter	Noradrenaline	TH;DBH;SLC18A2	Alpha-2 adrenergic	ADRA2A|ADRA2B|ADRA2C
+NE_B	neurotransmitter	Noradrenaline	TH;DBH;SLC18A2	Beta adrenergic	ADRB1|ADRB2
+HA_R	neurotransmitter	Histamine	HDC;SLC18A2	Histamine receptor	HRH1|HRH2|HRH3
+SST_SSTR	neuropeptide	Somatostatin	SST	Somatostatin receptor	SSTR1|SSTR2|SSTR3|SSTR4|SSTR5
+CORT_SSTR	neuropeptide	Cortistatin	CORT	Somatostatin receptor	SSTR1|SSTR2|SSTR3|SSTR4|SSTR5
+NPY_R	neuropeptide	Neuropeptide Y	NPY	NPY receptor	NPY1R|NPY2R|NPY5R
+VIP_R	neuropeptide	VIP	VIP	VIP receptor	VIPR1|VIPR2
+PACAP_R	neuropeptide	PACAP	ADCYAP1	PACAP receptor	ADCYAP1R1|VIPR1|VIPR2
+CCK_R	neuropeptide	Cholecystokinin	CCK	CCK receptor	CCKBR|CCKAR
+TAC1_NK1	neuropeptide	Substance P	TAC1	NK1 receptor	TACR1
+PENK_OPR	neuropeptide	Enkephalin	PENK	Delta/mu opioid receptor	OPRD1|OPRM1
+PDYN_KOR	neuropeptide	Dynorphin	PDYN	Kappa opioid receptor	OPRK1
+CRH_R	neuropeptide	CRH	CRH	CRH receptor	CRHR1|CRHR2
+OXT_R	neuropeptide	Oxytocin	OXT	Oxytocin receptor	OXTR
+AVP_R	neuropeptide	Vasopressin	AVP	Vasopressin receptor	AVPR1A|AVPR1B
+HCRT_R	neuropeptide	Orexin	HCRT	Orexin receptor	HCRTR1|HCRTR2
+PMCH_R	neuropeptide	MCH	PMCH	MCH receptor	MCHR1
+POMC_MC4R	neuropeptide	alpha-MSH	POMC	Melanocortin receptor	MC4R|MC3R
+AGRP_MC4R	neuropeptide	AgRP (antagonist)	AGRP	Melanocortin receptor	MC4R|MC3R	antagonist; interpret as inhibitory input
+NTS_R	neuropeptide	Neurotensin	NTS	Neurotensin receptor	NTSR1|NTSR2
+GAL_R	neuropeptide	Galanin	GAL	Galanin receptor	GALR1|GALR2
+TRH_R	neuropeptide	TRH	TRH	TRH receptor	TRHR
+BDNF_TRKB	neurotrophin	BDNF	BDNF	TrkB	NTRK2
+NTF3_TRKC	neurotrophin	NT-3	NTF3	TrkC	NTRK3
+NGF_TRKA	neurotrophin	NGF	NGF	TrkA / p75	NTRK1|NGFR
+RELN_R	guidance	Reelin	RELN	Reelin receptor	VLDLR|LRP8
+SEMA3A_R	guidance	Semaphorin 3A	SEMA3A	Neuropilin-1 / Plexin-A4	NRP1;PLXNA4
+SLIT_ROBO	guidance	Slit	SLIT1|SLIT2|SLIT3	Robo	ROBO1|ROBO2
+NRG1_ERBB4	guidance	Neuregulin-1	NRG1	ErbB4	ERBB4	ErbB4 is enriched in PV interneurons
+NRXN_NLGN	synaptic_adhesion	Neurexin	NRXN1|NRXN2|NRXN3	Neuroligin	NLGN1|NLGN2|NLGN3	contact-dependent
+CX3CL1_CX3CR1	neuron_glia	Fractalkine	CX3CL1	CX3CR1	CX3CR1	neuron to microglia
+IL34_CSF1R	neuron_glia	IL-34	IL34	CSF1R	CSF1R	neuron to microglia survival signal
+CSF1_CSF1R	neuron_glia	CSF-1	CSF1	CSF1R	CSF1R
+C3_CR3	neuron_glia	Complement C3	C3	Complement receptor 3	ITGAM;ITGB2	synaptic pruning (microglia)
+C1Q_LRP1	neuron_glia	C1q	C1QA;C1QB;C1QC	LRP1	LRP1
+APOE_TREM2	neuron_glia	ApoE	APOE	TREM2	TREM2;TYROBP
+APOE_LRP1	neuron_glia	ApoE	APOE	LRP1	LRP1
+PTN_PTPRZ1	neuron_glia	Pleiotrophin	PTN	PTPRZ1	PTPRZ1	OPC/astrocyte signalling
+MDK_PTPRZ1	neuron_glia	Midkine	MDK	PTPRZ1	PTPRZ1
+VEGFA_R	neurovascular	VEGF-A	VEGFA	VEGF receptor	KDR|FLT1
+PDGFB_PDGFRB	neurovascular	PDGF-B	PDGFB	PDGFRB	PDGFRB	endothelium to pericyte
+ANGPT1_TEK	neurovascular	Angiopoietin-1	ANGPT1	TIE2	TEK
+WNT7_FZD4	neurovascular	Wnt7a/b	WNT7A|WNT7B	Frizzled-4 / GPR124	FZD4;ADGRA2	blood-brain-barrier Wnt signalling
+TGFB1_R	neurovascular	TGF-beta1	TGFB1	TGF-beta receptor	TGFBR1;TGFBR2

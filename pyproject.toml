@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurostias"
+version = "0.1.0"
+description = "NeuroSTIAS: a plug-and-play neuroscience analysis system centred on 3D spatial transcriptomics"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "The NeuroSTIAS authors" }]
+dependencies = [
+  "numpy", "scipy", "pandas", "matplotlib", "seaborn", "scikit-learn", "statsmodels",
+  "networkx", "h5py", "pyyaml", "typer", "rich", "anndata", "scanpy[leiden]",
+  "squidpy", "reportlab", "gseapy", "umap-learn",
+]
+
+[project.optional-dependencies]
+ephys = ["mne", "neo", "elephant", "pynwb", "quantities"]
+modeling = ["brian2"]
+morphology = ["neurom"]
+imaging = ["nilearn"]
+benchmarks = ["SpaGCN", "paste-bio", "celltypist", "liana", "pybanksy"]
+llm = ["openai>=1.0", "anthropic>=0.30"]
+dev = ["pytest"]
+all = ["neurostias[ephys,modeling,morphology,imaging,dev]"]
+
+[project.scripts]
+neurostias = "neurostias.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["neurostias*", "plugins*"]
+
+[tool.setuptools.package-data]
+"neurostias" = ["skills/*/skill.yaml", "atlas/markers/*.yaml", "atlas/markers/*.tsv", "configs/*.yaml"]
+"plugins" = ["*/plugin.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::SyntaxWarning"]
+markers = ["data: test requires a locally downloaded dataset (skipped if missing)"]

@@ -1,0 +1,64 @@
+{
+  "id": "E08",
+  "title": "Spike-train and EEG analysis validation",
+  "question": "Do NeuroSTIAS spike-train metrics agree with Elephant, and do its EEG decoding pipelines reach reference accuracy on real motor-imagery data?",
+  "data_origin": "real",
+  "baseline_status": {},
+  "notes": [
+    "EEGBCI subject 1 CSP+LDA accuracy can be compared with the MNE documentation example for the same subject and runs.",
+    "Validation experiment: NeuroSTIAS wraps or re-implements established methods; agreement, not superiority, is the claim."
+  ],
+  "agreement": [
+    {
+      "metric": "firing_rate_hz",
+      "n_units": 1147,
+      "max_abs_diff": 4.328299496592081e-08,
+      "max_rel_diff": 1.1265839900986072e-09,
+      "pearson_r": 1.0
+    },
+    {
+      "metric": "isi_cv",
+      "n_units": 1147,
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "pearson_r": 0.9999999999999998
+    },
+    {
+      "metric": "lv",
+      "n_units": 1147,
+      "max_abs_diff": 4.440892098500626e-16,
+      "max_rel_diff": 2.9125901661295683e-16,
+      "pearson_r": 1.0
+    },
+    {
+      "metric": "fano_factor",
+      "n_units": 1147,
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "pearson_r": 1.0
+    }
+  ],
+  "selectivity": {
+    "n_units_tested": 1147,
+    "frac_selective_fdr05": 0.6329555361813426
+  },
+  "eeg": [
+    {
+      "index": "csp_lda_accuracy",
+      "mean": 0.6283333333333333,
+      "std": 0.18757627861458226
+    },
+    {
+      "index": "bandpower_logreg_accuracy",
+      "mean": 0.6255555555555554,
+      "std": 0.11547568089642304
+    },
+    {
+      "index": "chance",
+      "mean": 0.5177777777777777,
+      "std": 0.010448052132925066
+    }
+  ],
+  "n_units": 1147,
+  "runtime_seconds": 318.2
+}

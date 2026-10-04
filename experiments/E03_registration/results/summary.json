@@ -1,0 +1,94 @@
+{
+  "id": "E03",
+  "title": "Serial-section registration accuracy",
+  "question": "How accurately do NeuroSTIAS ICP and PASTE recover known rigid transforms between real sections, and where does each fail?",
+  "data_origin": "semi_synthetic",
+  "baseline_status": {
+    "paste": {
+      "status": "ran",
+      "detail": ""
+    }
+  },
+  "notes": [
+    "All results are semi-synthetic (known transforms applied to real sections). Real adjacent-section registration is assessed separately in E02 Part A via manual-layer agreement.",
+    "The NeuroSTIAS ICP searches initial rotations within +/-15 deg by default; the 15-45 deg regime deliberately tests outside that range. The global_search variant was added after a quick test showed the expected failure outside +/-15 deg; both are reported.",
+    "PASTE runs in its own environment (POT 0.9.0, NumPy 1.26, SciPy 1.11) because paste-bio 1.4 is incompatible with POT 0.9.7.",
+    "Noise floor: positions were jittered with sigma = 10 um, so a perfect registration still shows a mean error of 10*sqrt(pi/2) = 12.53 um (mean 2D displacement of the jitter); errors near 12.5 um are therefore at the floor."
+  ],
+  "summary": [
+    {
+      "regime": "15-45deg",
+      "method": "centroid_only",
+      "median_error_um": 989.8317502615376,
+      "mean_error_um": 1005.2427675597266,
+      "frac_error_below_50um": 0.0,
+      "median_seconds": 0.0,
+      "n": 33
+    },
+    {
+      "regime": "15-45deg",
+      "method": "neurostias_icp",
+      "median_error_um": 495.13665225621173,
+      "mean_error_um": 482.77153100834266,
+      "frac_error_below_50um": 0.09090909090909091,
+      "median_seconds": 1.9052910804748535,
+      "n": 33
+    },
+    {
+      "regime": "15-45deg",
+      "method": "neurostias_icp_global",
+      "median_error_um": 12.514114930359506,
+      "mean_error_um": 12.526889274561798,
+      "frac_error_below_50um": 1.0,
+      "median_seconds": 3.0753531455993652,
+      "n": 33
+    },
+    {
+      "regime": "15-45deg",
+      "method": "paste",
+      "median_error_um": 20.668306250197325,
+      "mean_error_um": 515.7664880971229,
+      "frac_error_below_50um": 0.6060606060606061,
+      "median_seconds": 68.85727524757385,
+      "n": 33
+    },
+    {
+      "regime": "<=15deg",
+      "method": "centroid_only",
+      "median_error_um": 287.48204274201083,
+      "mean_error_um": 273.5973863045778,
+      "frac_error_below_50um": 0.06060606060606061,
+      "median_seconds": 0.0,
+      "n": 33
+    },
+    {
+      "regime": "<=15deg",
+      "method": "neurostias_icp",
+      "median_error_um": 12.545480987161742,
+      "mean_error_um": 14.06983241181846,
+      "frac_error_below_50um": 0.9696969696969697,
+      "median_seconds": 1.928865671157837,
+      "n": 33
+    },
+    {
+      "regime": "<=15deg",
+      "method": "neurostias_icp_global",
+      "median_error_um": 12.54548098716176,
+      "mean_error_um": 14.069617036139809,
+      "frac_error_below_50um": 0.9696969696969697,
+      "median_seconds": 3.1217498779296875,
+      "n": 33
+    },
+    {
+      "regime": "<=15deg",
+      "method": "paste",
+      "median_error_um": 18.393396909394944,
+      "mean_error_um": 453.4654302930329,
+      "frac_error_below_50um": 0.6060606060606061,
+      "median_seconds": 64.41920685768127,
+      "n": 33
+    }
+  ],
+  "quick_mode": false,
+  "runtime_seconds": 4990.7
+}

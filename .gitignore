@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.DS_Store
+.pytest_cache/
+# data and large outputs are never committed; see data/manifest.yaml
+data/*
+!data/manifest.yaml
+!data/README.md
+models/
+*.h5ad
+*.h5
+*.nwb
+*.pkl
+*.npz
+runs/
+experiments/*/results/raw/
+experiments/*/results/cache/
+# private local corpora (copyrighted textbooks) never committed
+plugins/llm_assistant/corpus_private/
+benchmarks/envs/baselines/
+benchmarks/envs/brian2/
+!data/scripts/
+!data/scripts/*.py
+!data/checksums.lock.json
+benchmarks/envs/paste/
+experiments/*/results/runs/
+experiments/*/run.log
+.idea/
